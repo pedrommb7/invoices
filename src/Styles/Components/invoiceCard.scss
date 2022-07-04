@@ -1,0 +1,49 @@
+@import '../Generic/Fonts.scss';
+
+.card {
+    background: #F0F2F5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 24px;
+    font-family: $OpenSans;
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin-top: 0;
+        }
+
+        .invoice-number {
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+
+    .payment-status {
+        display: flex;
+        justify-content: space-between;
+
+        .payment {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            p {
+                margin: 8px 0;
+            }
+
+            .price {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+
+        .status {
+            margin: 8px 0;
+        }
+    }
+
+}

@@ -1,0 +1,88 @@
+@import './Components/listingButton.scss';
+@import './Components/filterButton.scss';
+@import './Components/newInvoiceButton.scss';
+@import './Components/invoiceCard.scss';
+@import './Generic/Fonts.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+
+    h2 {
+        margin: 26px;
+        font-family: $OpenSans;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    nav {
+        margin: 0 26px;
+    }
+    
+}
+
+.mg-26 {
+    margin: 26px;
+}
+
+.mg-lr-26 {
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+.mg-tb-16 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.mg-tb-8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    color: #6DC7C7;
+    font-weight: 700;
+
+    span {
+        font-family: $OpenSans;
+        margin-right: 15px;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        .arrow-button {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+    
+            padding: 8px;
+        }
+    
+        .button__arrow {
+            background-color: transparent;
+    
+            height: 6px;
+            width: 6px;
+        }
+
+        .button__arrow--down {
+            border-bottom: 3px solid #6DC7C7;
+            border-right: 3px solid #6DC7C7;
+            transform: translateY(-25%) rotate(45deg);
+        }
+    }
+
+    
+}

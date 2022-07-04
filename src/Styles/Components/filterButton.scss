@@ -1,0 +1,55 @@
+.filter-button {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    .filter {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-right: 5px;
+    }
+}
+
+
+
+.container {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Size */
+    height: 32px;
+}
+
+.container__left {
+    height: 2px;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container__circle {
+    /* Size */
+    height: 32px;
+    width: 32px;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container__right {
+    /* Take the remaining width */
+    flex: 1;
+    height: 2px;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+}
