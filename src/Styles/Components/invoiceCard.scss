@@ -7,7 +7,7 @@
     padding: 24px;
     font-family: $OpenSans;
 
-    .heading {
+    .card__heading {
         display: flex;
         justify-content: space-between;
 
@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
 
-        .payment {
+        .payment-status__payment {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -41,7 +41,7 @@
             }
         }
 
-        .status {
+        .payment-status__status {
             margin: 8px 0;
         }
     }
