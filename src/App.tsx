@@ -1,8 +1,8 @@
 import './App.scss';
 import './Styles/main.scss';
 import './Styles/components/moonButton.scss'
-import InvoiceCard from './components/InvoiceCard';
 import NewInvoiceButton from './components/NewInvoiceButton';
+import InvoiceCardsList from 'components/InvoiceCardsList';
 
 const filterBy = () => {
 
@@ -38,11 +38,7 @@ function App() {
           <NewInvoiceButton newInvoice={'newInvoice'}/>
         </nav>
 
-        <InvoiceCard data={{price: 20, name:"Name", date:"Due DD-MM-YYYY", paid:"paid", INV_X:"INV_X"}}/>
-        <InvoiceCard data={{price: 20, name:"Name", date:"Due DD-MM-YYYY", paid:"paid", INV_X:"INV_X"}}/>
-        <InvoiceCard data={{price: 20, name:"Name", date:"Due DD-MM-YYYY", paid:"paid", INV_X:"INV_X"}}/>
-        <InvoiceCard data={{price: 20, name:"Name", date:"Due DD-MM-YYYY", paid:"paid", INV_X:"INV_X"}}/>
-        <InvoiceCard data={{price: 20, name:"Name", date:"Due DD-MM-YYYY", paid:"paid", INV_X:"INV_X"}}/>
+        <InvoiceCardsList />
       </main>
 
       <footer>
