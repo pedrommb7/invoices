@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <>
-        <nav>
+        <nav className='nav-header'>
           <button className='hamburguer mg-26'>
             <hr />
             <hr className='hamburguer__half-line' />
