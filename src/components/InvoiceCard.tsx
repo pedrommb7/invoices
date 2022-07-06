@@ -3,10 +3,10 @@ import "../Styles/components/invoiceCard.scss";
 
 interface InvoiceCard {
   data: {
-    INV_X: string;
+    ID: string;
     price: number;
     date: any;
-    paid: string;
+    state: string;
     name: string;
   };
 }
@@ -14,12 +14,12 @@ interface InvoiceCard {
 const InvoiceCard = (property: InvoiceCard) => {
 
     //destruct of object data
-    const {INV_X, price, date, paid, name} = property.data
+    const {ID, price, date, state, name} = property.data
   
     return (
     <section className="card mg-lr-26 mg-tb-16">
       <div className="heading">
-        <p className="invoice-number">{INV_X}</p>
+        <p className="invoice-number">{ID}</p>
         <p>{name}</p>
       </div>
 
@@ -29,7 +29,7 @@ const InvoiceCard = (property: InvoiceCard) => {
           <p className="price">{price}</p>
         </div>
         <div className="status">
-          <span>{paid}</span>
+          <span>{state}</span>
         </div>
       </section>
     </section>

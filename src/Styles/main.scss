@@ -3,6 +3,7 @@
 @import './Components/newInvoiceButton.scss';
 @import './Components/invoiceCard.scss';
 @import './Generic/Fonts.scss';
+@import './base/reset.scss';
 
 nav {
     display: flex;
@@ -49,12 +50,12 @@ footer {
     align-items: center;
     margin-top: 30px;
     margin-bottom: 200px;
-    color: #6DC7C7;
-    font-weight: 700;
 
     span {
         font-family: $OpenSans;
         margin-right: 15px;
+        color: #6DC7C7;
+        font-weight: 700;
     }
 
     button {
@@ -66,21 +67,7 @@ footer {
             align-items: center;
             display: flex;
             justify-content: center;
-    
             padding: 8px;
-        }
-    
-        .button__arrow {
-            background-color: transparent;
-    
-            height: 6px;
-            width: 6px;
-        }
-
-        .button__arrow--down {
-            border-bottom: 3px solid #6DC7C7;
-            border-right: 3px solid #6DC7C7;
-            transform: translateY(-25%) rotate(45deg);
         }
     }
 
