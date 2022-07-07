@@ -6,12 +6,13 @@
 @import './base/reset.scss';
 
 
-.nav-header {
-    display: flex;
-    justify-content: space-between;
-}
 
 @media (max-width: 500px) {
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
     main {
         h2 {
             margin: 26px;
@@ -29,6 +30,11 @@
 }
 
 @media (min-width: 501px) {
+    .nav-header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .title-buttons{
         display: flex;
         justify-content: space-between;
@@ -36,6 +42,8 @@
     }
 
     main {
+        margin: 50px 150px;
+        
         nav {
             display: flex;
             margin: 0 26px;
@@ -74,8 +82,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 200px;
+    padding-top: 30px;
+    padding-bottom: 200px;
 
     span {
         font-family: $OpenSans;

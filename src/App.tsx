@@ -3,9 +3,10 @@ import './Styles/main.scss';
 import Button from './components/Button';
 import InvoiceCardsList from 'components/InvoiceCardsList';
 import Header from 'components/Header';
+import FilterBy from 'components/FilterBy';
 
 const filterBy = () => {
-
+  <FilterBy />
 }
 
 function App() {

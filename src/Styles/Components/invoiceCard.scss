@@ -10,46 +10,59 @@
 
 
 @media (max-width: 500px) {
-    .card__heading {
+
+
+    .card__invoiceAnddate {
         display: flex;
         justify-content: space-between;
-
-        p {
-            margin-top: 0;
-        }
 
         .invoice-number {
             font-weight: 600;
             line-height: 24px;
         }
+
+        p {
+            margin-top: 0;
+        }
     }
+
+    .card__userInfo {
+        .hide {
+            display: none;
+        }
+    }
+    
+    
 
     .payment-status {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        .payment-status__payment {
+        .payment-status__price {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
-            p {
-                margin: 8px 0;
-            }
 
             .price {
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 28px;
+                margin: 8px 0;
             }
-        }
 
-        .payment-status__status {
-            margin: 8px 0;
         }
     }
+    
+    
+
 }
 
 @media (min-width: 501px) {
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
 }

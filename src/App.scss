@@ -1,7 +1,9 @@
 @import './Styles/main.scss';
 
-$mainColor: #FFFFFF;
+$mainColor: linear-gradient(177.16deg, #FFFFFF -5.63%, #E2E4E9 118.8%, #F0F2F5 118.8%);
 
 .App {
-  background-color: $mainColor;
+  background: $mainColor;
 }
+
+

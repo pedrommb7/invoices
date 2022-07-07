@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
         <nav className='nav-header'>
-          <button className='hamburguer mg-26'>
+          <button className='hamburguer mg-26 hide'>
             <hr />
             <hr className='hamburguer__half-line' />
             <hr />
