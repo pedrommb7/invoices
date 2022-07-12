@@ -2,8 +2,8 @@
 
 $mainColor: linear-gradient(177.16deg, #FFFFFF -5.63%, #E2E4E9 118.8%, #F0F2F5 118.8%);
 
-.App {
+body {
   background: $mainColor;
+  font-family: $OpenSans;
+  line-height: 1.5rem;
 }
-
-

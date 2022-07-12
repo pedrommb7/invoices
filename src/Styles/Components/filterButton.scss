@@ -1,16 +1,9 @@
 .filter-button {
-    background: none;
-    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 
-    .filter-button__text {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+    &__text {
         font-weight: 400;
-        margin-right: 5px;
     }
 }

@@ -17,8 +17,8 @@
         h2 {
             margin: 26px;
             font-family: $OpenSans;
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 1.5rem;
+            line-height: 2rem;
         }
 
         nav {
@@ -49,7 +49,7 @@
             margin: 0 26px;
 
             .filter-button {
-                margin-right: 40px;
+                margin-right: 2.5rem;
             }
         }
 
@@ -69,41 +69,35 @@
 }
 
 .mg-tb-16 {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .mg-tb-8 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-footer {
+.seemore {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 200px;
+    padding-top: 1.5rem;
+    padding-bottom: 12.5rem;
 
-    span {
+    p {
         font-family: $OpenSans;
         margin-right: 15px;
         color: #6DC7C7;
         font-weight: 700;
     }
 
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        .arrow-button {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            padding: 8px;
-        }
+    &__arrow-button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
     }
+  
 
-    
 }

@@ -20,26 +20,25 @@ const InvoiceCard = (property: InvoiceCard) => {
     return (
     <section className="card mg-lr-26 mg-tb-16">
       <div className="card__data">
-        <div className="card__data__invoiceAnddate">
+        <div className="card__data__invoice-date">
           <p className="invoice-number">#{ID}</p>
-          <p>{date}</p>
+          <p className="date">{date}</p>
         </div>
-        <div className="card__data__userInfo">
+        <div className="card__data__userinfo">
           <p>{name}</p>
           <p className="hide">{profession}</p>
         </div>
       </div>
         
       
-
-        <div className="payment-status">
-          <div className="payment-status__price">
-            <p className="price">{price}€</p>
-          </div>
-          <div className="payment-status__status">
-            <p>{state}</p>
-          </div>
+      <div className="card__payment-status">
+        <div className="card__payment-status__price">
+          <p>{price}€</p>
         </div>
+        <div className="card__payment-status__status">
+          <p>{state}</p>
+        </div>
+      </div>
         
       
     </section>
