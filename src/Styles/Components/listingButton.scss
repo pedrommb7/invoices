@@ -17,7 +17,7 @@
             margin: 0;
         }
 
-        .hamburguer__half-line {
+        hr:nth-child(2) {
             width: 12px;
             margin: 7px 10px 7px 0;
         }
@@ -41,7 +41,7 @@
             margin: 0;
         }
 
-        .hamburguer__half-line {
+        hr:nth-child(2) {
             width: 12px;
             margin: 7px 10px 7px 0;
         }
