@@ -1,26 +1,26 @@
-import React from 'react'
-import { plusSVG } from '../images/index';
-import '../Styles/components/newInvoiceButton.scss';
+import React from "react";
+import { plusSVG } from "../images/index";
+import "../Styles/components/newInvoiceButton.scss";
 
 interface NewInvoice {
-    class: string
-    text: string
+  class: string;
+  text: string;
+  onClick: () => void;
 }
 
-const createNewInvoice = () => {
-
-}
-
-
-const NewInvoiceButton = (property: NewInvoice) => {
+const Button = (property: NewInvoice) => {
   return (
     <>
-      <button type="button" className={property.class} onClick={createNewInvoice}>
-          {plusSVG}
-          <p>{property.text}</p>
+      <button
+        type="button"
+        className={property.class}
+        onClick={() => property.onClick()}
+      >
+        {plusSVG}
+        <p>{property.text}</p>
       </button>
     </>
-  )
-}
+  );
+};
 
-export default NewInvoiceButton
+export default Button;

@@ -5,3 +5,41 @@
 @mixin display {
     display: block;
 }
+
+@mixin align-horizontally {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin align-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin space-between-horizontally {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin mg-26 {
+    margin: 26px;
+}
+
+@mixin mg-lr-26 {
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+@mixin mg-tb-1rem {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@mixin mg-tb-05rem {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}

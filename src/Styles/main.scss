@@ -1,13 +1,11 @@
-@import './Components/listingButton.scss';
-@import './Components/filterButton.scss';
-@import './Components/newInvoiceButton.scss';
-@import './Components/invoiceCard.scss';
-@import './Generic/Fonts.scss';
 @import './base/reset.scss';
+@import './components/index.scss';
+@import './generic/Fonts.scss';
+@import './settings/index.scss';
+@import './tools/mixins.scss';
 
 
-
-@media (max-width: 500px) {
+@media (max-width: $breakpoint-mobile) {
     .nav-header {
         display: flex;
         justify-content: space-between;
@@ -16,12 +14,11 @@
     main {
         h2 {
             margin: 26px;
-            font-family: $OpenSans;
             font-size: 1.5rem;
             line-height: 2rem;
         }
 
-        nav {
+        .title-buttons__buttons {
             display: flex;
             justify-content: space-between;
             margin: 0 26px;
@@ -29,22 +26,52 @@
     }
 }
 
-@media (min-width: 501px) {
+@media (min-width: $breakpoint-tablet) {
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main {
+        margin: 50px 150px;
+
+        .title-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 26px 0;
+        }
+        
+        .title-buttons__buttons {
+            display: flex;
+            margin: 0 26px;
+
+            .filter-button {
+                margin-right: 2.5rem;
+            }
+        }
+
+        h2 {
+            margin: 0 26px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
     .nav-header {
         display: flex;
         justify-content: flex-end;
     }
 
-    .title-buttons{
-        display: flex;
-        justify-content: space-between;
-        margin: 26px 0;
-    }
-
     main {
         margin: 50px 150px;
-        
-        nav {
+
+        .title-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 26px 0;
+        }
+
+        .title-buttons__buttons {
             display: flex;
             margin: 0 26px;
 
@@ -60,35 +87,36 @@
 }
 
 .mg-26 {
-    margin: 26px;
+    @include mg-26;
 }
 
 .mg-lr-26 {
-    margin-left: 26px;
-    margin-right: 26px;
+    @include mg-lr-26;
 }
 
-.mg-tb-16 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.mg-tb-1rem {
+    @include mg-tb-1rem;
 }
 
-.mg-tb-8 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+.mg-tb-05rem {
+    @include mg-tb-05rem;
 }
 
-.seemore {
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 1.5rem;
-    padding-bottom: 12.5rem;
+    padding-bottom: 2rem;
 
     p {
-        font-family: $OpenSans;
         margin-right: 15px;
-        color: #6DC7C7;
+        color: $primary;
         font-weight: 700;
     }
 

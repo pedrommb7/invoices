@@ -11,6 +11,8 @@ const filterBy = () => {
   <FilterBy />
 }
 
+const createNewInvoice = () => {};
+
 async function fetchData() {
   try {
     const result = await axios.get("https://invoice-api-exercise.herokuapp.com/invoices");
@@ -30,19 +32,19 @@ function App() {
       <main>
         <section className='title-buttons'>
           <h2>Invoices - X</h2>
-          <nav>
+          <div className='title-buttons__buttons'>
             <button type="button" className='filter-button' onClick={filterBy}>
                 <span className='filter-button__text'>Filter</span>
                 {filterSVG}
             </button>
-            <Button class={'roundedButton'} text={'New Invoice'}/>
-          </nav>
+            <Button class={'button--rounded'} text={'New Invoice'} onClick={createNewInvoice}/>
+          </div>
         </section>
         
         <InvoiceCardsList />
 
-        <section className='seemore'>
-          <button type="button" className="seemore__arrow-button">
+        <section className='link'>
+          <button type="button" className="link__arrow-button">
             <p>See more invoices</p> 
             {downArrowSVG}
           </button>

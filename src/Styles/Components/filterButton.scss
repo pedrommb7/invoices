@@ -1,9 +1,6 @@
-.filter-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import '../tools/mixins.scss';
 
-    &__text {
-        font-weight: 400;
-    }
+.filter-button {
+    @include align-horizontally;
+    font-weight: 400;
 }

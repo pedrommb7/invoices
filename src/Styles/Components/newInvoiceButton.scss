@@ -1,6 +1,7 @@
-@import '../Generic/Fonts.scss';
+@import '../generic/Fonts.scss';
+@import '../settings/index.scss';
 
-.roundedButton {
+.button--rounded {
     /*Alignment*/
     display: flex;
     flex-direction: row;
@@ -8,16 +9,13 @@
     align-items: center;
 
     color: white;
-    background: #6DC7C7;
+    background: $primary;
     border-radius: 31px;
-    border: none;
-    font-family: $OpenSans;
 
     p {
         padding-left: 0.5rem;
         font-weight: 600;
         line-height: 1.5rem;
-        font-family: $OpenSans;
         letter-spacing: 1px;
         font-size: 1rem;
         margin: 7px 0;

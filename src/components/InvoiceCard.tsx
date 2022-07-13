@@ -8,25 +8,25 @@ interface InvoiceCard {
     date: any;
     state: string;
     name: string;
-    profession: string;
+    description: string;
   };
 }
 
 const InvoiceCard = (property: InvoiceCard) => {
 
     //destruct of object data
-    const {ID, price, date, state, name, profession} = property.data
+    const {ID, price, date, state, name, description} = property.data
   
     return (
-    <section className="card mg-lr-26 mg-tb-16">
+    <section className="card mg-lr-26 mg-tb-1rem">
       <div className="card__data">
-        <div className="card__data__invoice-date">
-          <p className="invoice-number">#{ID}</p>
+        <div className="card__data__group">
+          <p className="card__number">#{ID}</p>
           <p className="date">{date}</p>
         </div>
         <div className="card__data__userinfo">
           <p>{name}</p>
-          <p className="hide">{profession}</p>
+          <p className="hide">{description}</p>
         </div>
       </div>
         
