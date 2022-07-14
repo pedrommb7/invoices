@@ -1,0 +1,115 @@
+@import "../generic/_fonts.scss";
+@import "../settings/_colors";
+@import "../settings/_breakpoints";
+@import "../tools/_mixins.scss";
+
+a {
+  text-decoration: none;
+  color: $menu-color;
+}
+
+.card {
+  background: $card-background;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+
+    &__group {
+      display: flex;
+      //row-gap: 1rem;
+      flex-direction: column;
+
+      :first-child {
+        font-weight: 600;
+        line-height: 1.5rem;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      margin: 8px 0;
+    }
+  }
+
+  &__status {
+    p {
+      margin: 0 0 22px 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .card {
+    @include space-between-horizontally;
+
+    &__data {
+      display: flex;
+      flex: 4;
+
+      &__group {
+        flex: 1;
+        row-gap: 1rem;
+
+        :first-child {
+          font-weight: 700;
+        }
+      }
+
+      .date {
+        font-weight: 300;
+      }
+
+      &__userinfo {
+        flex: 1;
+      }
+
+      &:last-child {
+        display: flex;
+        flex: 2;
+      }
+
+      :last-child {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+    }
+
+    &__price {
+      flex: 1;
+
+      p {
+        font-weight: 700;
+        line-height: 2rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    &__status {
+      flex: 1;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

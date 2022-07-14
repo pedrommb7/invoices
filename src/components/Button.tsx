@@ -1,10 +1,11 @@
 import React from "react";
 import { plusSVG } from "../images/index";
-import "../Styles/components/newInvoiceButton.scss";
+import "../styles/components/_newInvoiceButton.scss";
 
 interface NewInvoice {
   class: string;
-  text: string;
+  text?: string;
+  svg?: JSX.Element;
   onClick: () => void;
 }
 
@@ -16,7 +17,7 @@ const Button = (property: NewInvoice) => {
         className={property.class}
         onClick={() => property.onClick()}
       >
-        {plusSVG}
+        {property.svg}
         <p>{property.text}</p>
       </button>
     </>

@@ -1,0 +1,22 @@
+@import "../generic/fonts.scss";
+@import "../settings/index.scss";
+
+.button--rounded {
+  /*Alignment*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px 4px 4px;
+  color: white;
+  background: $primary;
+  border-radius: 31px;
+
+  p {
+    padding: 4px 4px 4px 8px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    margin: 0;
+  }
+}

@@ -1,5 +1,8 @@
 import React from 'react'
 import { moonSVG } from '../images/index'
+import Button from './Button'
+
+const darkMode = () => {}
 
 const Header = () => {
   return (
@@ -10,9 +13,8 @@ const Header = () => {
             <hr className='hamburguer__half-line' />
             <hr />
           </button>
-          <button type="button" className='mg-26'>
-            {moonSVG}
-          </button>
+          <Button class='mg-26' svg={moonSVG} onClick={darkMode} />
+          
         </nav>
     </header>
   )

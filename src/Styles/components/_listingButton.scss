@@ -1,0 +1,51 @@
+@import "../settings/index.scss";
+@import "../tools/mixins.scss";
+
+.hamburguer {
+  width: 1.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1.25rem;
+
+  hr {
+    height: 3px;
+    background: $menu-color;
+    width: 100%;
+    border: none;
+    margin: 0;
+  }
+
+  hr:nth-child(2) {
+    width: 12px;
+    margin: 7px 10px 7px 0;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .hamburguer {
+    width: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1.25rem;
+
+    hr {
+      height: 3px;
+      width: 40px;
+      background: $menu-color;
+      width: 100%;
+      border: none;
+      margin: 0;
+    }
+
+    hr:nth-child(2) {
+      width: 12px;
+      margin: 7px 10px 7px 0;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .hide {
+    @include hide;
+  }
+}

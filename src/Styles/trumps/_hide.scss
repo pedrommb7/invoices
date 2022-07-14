@@ -1,0 +1,21 @@
+.hide {
+
+    @media (max-width: $breakpoint-mobile){
+        &--sm {
+            display: none;
+        }
+    }
+    
+
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        &--md {
+            display: block;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        &--lg {
+            display: block;
+        }
+    }
+}
