@@ -1,7 +1,7 @@
 import './App.scss';
 import './styles/main.scss';
 import Button from './components/Button';
-import InvoiceCardsList from './components/InvoiceCardsList';
+import InvoiceCardsList from './components/invoices/InvoiceCardsList';
 import Header from './components/Header';
 import FilterBy from './components/FilterBy';
 import {filterSVG, downArrowSVG, plusSVG} from "./images/index";
