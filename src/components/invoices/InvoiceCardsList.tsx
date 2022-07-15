@@ -16,7 +16,7 @@ const InvoiceCardsList = () => {
       const result = await axios.get(
         "https://invoice-api-exercise.herokuapp.com/invoices"
       );
-      //console.log(result.data);
+      
       const invoiceList = [] as InvoiceToShow[];
       result.data.forEach((invoiceData: any) => {
         invoiceList.push({
