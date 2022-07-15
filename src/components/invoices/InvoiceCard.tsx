@@ -6,18 +6,6 @@ interface InvoiceCard {
   data: InvoiceToShow;
 }
 
-
-const fetchData = async () => {
-  try {
-    const result = await axios.get("https://invoice-api-exercise.herokuapp.com/invoices");
-    console.log(result.data);
-  } catch(error) {
-    console.error(error);
-  }
-}
-
-fetchData();
-
 const InvoiceCard = (property: InvoiceCard) => {
   //destruct of object data
   const { ID, price, date, state, name, description } = property.data;
