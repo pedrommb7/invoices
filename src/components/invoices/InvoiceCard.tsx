@@ -1,6 +1,6 @@
-import axios from "axios";
 import "../../styles/components/_invoiceCard.scss";
-import { InvoiceToShow } from "./common";
+import ClassComponent from "./ClassComponent";
+import { InvoiceToShow, INVOICE_STATE, CLASS_TYPE } from "./common";
 
 interface InvoiceCard {
   data: InvoiceToShow;
@@ -9,6 +9,23 @@ interface InvoiceCard {
 const InvoiceCard = (property: InvoiceCard) => {
   //destruct of object data
   const { ID, price, date, state, name, description } = property.data;
+
+
+  const stateStyling = () => {
+    switch(state) {
+      case INVOICE_STATE.PAID:
+        return CLASS_TYPE.SUCCESS;
+      
+      case INVOICE_STATE.PENDING:
+        return CLASS_TYPE.WARNING;
+      
+      default:
+        return CLASS_TYPE.DANGER;
+    }
+  }
+
+  const strg = state;
+  const stateToUpperCase = strg.charAt(0).toUpperCase() + strg.slice(1);
 
     return (
       <a href="#">
@@ -29,7 +46,7 @@ const InvoiceCard = (property: InvoiceCard) => {
               <p>{price}€</p>
             </div>
             <div className="card__status">
-              <p>{state}</p>
+              <ClassComponent class={stateStyling()} text={stateToUpperCase}/>
             </div>
           </div>
         </section>

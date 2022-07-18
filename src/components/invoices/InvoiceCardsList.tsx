@@ -16,13 +16,14 @@ const InvoiceCardsList = () => {
       const result = await axios.get(
         "https://invoice-api-exercise.herokuapp.com/invoices"
       );
-      
+
       const invoiceList = [] as InvoiceToShow[];
+
       result.data.forEach((invoiceData: any) => {
         invoiceList.push({
           ID: invoiceData.invoiceId,
           price: invoiceData.items[0].price,
-          date: invoiceData.invoiceDate,
+          date: formatDate(invoiceData.invoiceDate),
           state: invoiceData.invoiceState,
           name: invoiceData.client.name,
           description: invoiceData.invoiceDescription,
@@ -30,16 +31,22 @@ const InvoiceCardsList = () => {
       });
 
       setcardListing(invoiceList);
+
     } catch (error) {
       console.error(error);
     }
   };
+
+  const formatDate = (date: string) => {
+    const today = new Date(date);
+    return "Due " + today.getDate() + " " + today.getMonth() + " " + today.getFullYear();
+  }
   
     return (
       <ul>
-        {cardListing.map((element) => {
+        {cardListing.map((element, index) => {
             return (
-              <li>
+              <li key={index}>
                 <InvoiceCard data={element}/>
               </li> 
             )        
