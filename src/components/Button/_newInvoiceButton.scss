@@ -1,0 +1,19 @@
+@import "../../styles/generic/fonts";
+@import "../../styles/settings/index";
+
+.button--rounded {
+  /*Alignment*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: max-content;
+  padding: 4px 8px 4px 4px;
+  color: white;
+  background: $primary;
+  border-radius: 31px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
+}

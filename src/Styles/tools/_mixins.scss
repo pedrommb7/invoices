@@ -1,0 +1,27 @@
+@mixin hide {
+  display: none;
+}
+
+@mixin display {
+  display: block;
+}
+
+@mixin align-horizontally {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-vertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin space-between-horizontally {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
