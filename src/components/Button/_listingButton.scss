@@ -1,5 +1,5 @@
-@import "../settings/index.scss";
-@import "../tools/mixins.scss";
+@import "../../styles/settings/index";
+@import "../../styles/tools/mixins";
 
 .hamburguer {
   width: 1.5rem;
@@ -7,17 +7,17 @@
   flex-flow: column wrap;
   margin: 1.25rem;
 
-  hr {
+  div {
     height: 3px;
     background: $menu-color;
     width: 100%;
     border: none;
     margin: 0;
-  }
 
-  hr:nth-child(2) {
-    width: 12px;
-    margin: 7px 10px 7px 0;
+    &:nth-child(2) {
+      width: 12px;
+      margin: 7px 10px 7px 0;
+    }
   }
 }
 
@@ -28,18 +28,18 @@
     flex-flow: column wrap;
     margin: 1.25rem;
 
-    hr {
+    div {
       height: 3px;
       width: 40px;
       background: $menu-color;
       width: 100%;
       border: none;
       margin: 0;
-    }
 
-    hr:nth-child(2) {
-      width: 12px;
-      margin: 7px 10px 7px 0;
+      &:nth-child(2) {
+        width: 12px;
+        margin: 7px 10px 7px 0;
+      }
     }
   }
 }

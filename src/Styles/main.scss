@@ -1,4 +1,4 @@
-@import "./base/reset.scss";
+@import "./base/index.scss";
 @import "./components/index.scss";
 @import "./generic/fonts.scss";
 @import "./settings/index.scss";
@@ -11,38 +11,20 @@
 }
 
 main {
-  h1 {
-    margin: 26px;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .title-buttons__buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 26px;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
-.mg-26 {
-  @include mg-26;
+h1 {
+  margin: 26px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.mg-lr-26 {
-  @include mg-lr-26;
-}
-
-.mg-tb-1rem {
-  @include mg-tb-1rem;
-}
-
-.mg-tb-05rem {
-  @include mg-tb-05rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+.filter__button--wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 26px;
 }
 
 .link {
@@ -51,78 +33,49 @@ ul {
   align-items: center;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
+  color: $primary;
+  font-weight: 700;
 
-  p {
-    margin-right: 15px;
-    color: $primary;
-    font-weight: 700;
-  }
-
-  &__arrow-button {
+  .arrow-button {
     flex-flow: row-reverse;
     padding: 0.5rem;
   }
 }
 
 @media (min-width: $breakpoint-tablet) {
-  .nav-header {
+  .filter__header {
     display: flex;
     justify-content: space-between;
+    margin: 26px 0;
   }
 
-  main {
-    margin: 50px 150px;
+  .filter-button {
+    margin-right: 2.5rem;
+  }
 
-    .title-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin: 26px 0;
-    }
-
-    .title-buttons__buttons {
-      display: flex;
-      margin: 0 26px;
-
-      .filter-button {
-        margin-right: 2.5rem;
-      }
-    }
-
-    h1 {
-      margin: 0 26px;
-      font-size: 2rem;
-    }
+  h1 {
+    margin: 0 26px;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
   .nav-header {
-    display: flex;
     justify-content: flex-end;
   }
 
-  main {
-    margin: 50px 150px;
+  .filter__header {
+    justify-content: space-between;
+    align-items: center;
+    margin: 26px 0;
+  }
 
-    .title-buttons {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 26px 0;
-    }
+  .filter__button--wrapper {
+    margin: 0 26px;
+  }
 
-    .title-buttons__buttons {
-      display: flex;
-      margin: 0 26px;
-
-      .filter-button {
-        margin-right: 2.5rem;
-      }
-    }
-
-    h1 {
-      margin: 0 26px;
-      font-size: 2rem;
-    }
+  h1 {
+    margin: 0 26px;
+    font-size: 2rem;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import InvoiceCard from './InvoiceCard';
-import { InvoiceToShow } from './common';
+import { InvoiceToShow } from '../common';
 
 const InvoiceCardsList = () => {
 
@@ -39,7 +39,10 @@ const InvoiceCardsList = () => {
 
   const formatDate = (date: string) => {
     const today = new Date(date);
-    return "Due " + today.getDate() + " " + today.getMonth() + " " + today.getFullYear();
+    const month =  today.getMonth();
+    const m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+    return "Due " + today.getDate() + " " + m[month] + " " + today.getFullYear();
   }
   
     return (

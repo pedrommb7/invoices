@@ -1,15 +1,16 @@
 import React from "react";
-import { plusSVG } from "../images/index";
-import "../styles/components/_newInvoiceButton.scss";
+import { plusSVG } from "../../images/index";
+import "./_newInvoiceButton.scss";
 
-interface NewInvoice {
+interface ButtonProperties {
   class: string;
+  type: string;
   text?: string;
   svg?: JSX.Element;
   onClick: () => void;
 }
 
-const Button = (property: NewInvoice) => {
+const Button = (property: ButtonProperties) => {
   return (
     <>
       <button
@@ -18,7 +19,7 @@ const Button = (property: NewInvoice) => {
         onClick={() => property.onClick()}
       >
         {property.svg}
-        <p>{property.text}</p>
+        {property.text}
       </button>
     </>
   );

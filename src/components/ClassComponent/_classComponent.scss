@@ -1,4 +1,4 @@
-@import "../settings/_colors";
+@import "../../styles/settings/colors";
 
 .tag {
   position: relative;
@@ -7,7 +7,7 @@
 
   &::before {
     //status symbol: paid, pending or canceled
-    border-radius: 999px;
+    border-radius: 50px;
     content: "";
     display: inline-block;
     height: 0.75rem;
@@ -20,26 +20,26 @@
   }
 
   &--success {
-    color: $color-paid;
+    color: $color-success;
 
     &::before {
-      background-color: $color-paid;
+      background-color: $color-success;
     }
   }
 
   &--warning {
-    color: $color-pending;
+    color: $color-warning;
 
     &::before {
-      background-color: $color-pending;
+      background-color: $color-warning;
     }
   }
 
   &--danger {
-    color: $color-canceled;
+    color: $color-danger;
 
     &::before {
-      background-color: $color-canceled;
+      background-color: $color-danger;
     }
   }
 }

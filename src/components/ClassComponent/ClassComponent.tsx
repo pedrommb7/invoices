@@ -1,6 +1,6 @@
 import React from 'react'
-import {CLASS_TYPE} from './common'
-import '../../styles/components/_classComponent.scss';
+import {CLASS_TYPE} from '../common'
+import './_classComponent.scss';
 
 type StatusClass = {
     class: CLASS_TYPE;

@@ -1,6 +1,7 @@
-import "../../styles/components/_invoiceCard.scss";
-import ClassComponent from "./ClassComponent";
-import { InvoiceToShow, INVOICE_STATE, CLASS_TYPE } from "./common";
+import "./_invoiceCard.scss";
+import "../../styles/trumps/_margins.scss"
+import ClassComponent from "components/ClassComponent/ClassComponent";
+import { InvoiceToShow, INVOICE_STATE, CLASS_TYPE } from "../common";
 
 interface InvoiceCard {
   data: InvoiceToShow;
@@ -29,7 +30,7 @@ const InvoiceCard = (property: InvoiceCard) => {
 
     return (
       <a href="#">
-        <section className="card mg-lr-26 mg-tb-1rem">
+        <section className="card mg--lr-26 mg--tb-1rem">
           <div className="card__data">
             <div className="card__data__group">
               <p className="card__number">#{ID}</p>
