@@ -1,25 +1,24 @@
 import React from "react";
-import { plusSVG } from "../../images/index";
 import "./_newInvoiceButton.scss";
+import {ButtonProperties} from '../common';
+import "../../styles/settings/_colors.scss";
 
-interface ButtonProperties {
-  class: string;
-  type: string;
-  text?: string;
-  svg?: JSX.Element;
-  onClick: () => void;
-}
 
 const Button = (property: ButtonProperties) => {
+
+  const {variant, type, text, alignment, mgAmount, pdAmount, color, icon, onClick} = property
+
   return (
     <>
       <button
-        type="button"
-        className={property.class}
-        onClick={() => property.onClick()}
+        type={type}
+        className={`button--${variant} align--${alignment} margin--${mgAmount} padding--${pdAmount} color--${color}`}
+        onClick={() => onClick()}
       >
-        {property.svg}
-        {property.text}
+        <>
+          {icon.svg}
+          {text}
+        </>
       </button>
     </>
   );

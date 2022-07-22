@@ -28,18 +28,7 @@ h1 {
 }
 
 .link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
-  color: $primary;
   font-weight: 700;
-
-  .arrow-button {
-    flex-flow: row-reverse;
-    padding: 0.5rem;
-  }
 }
 
 @media (min-width: $breakpoint-tablet) {

@@ -3,7 +3,10 @@ import Button from 'components/Button/Button';
 import InvoiceCardsList from './components/InvoiceCard/InvoiceCardsList';
 import Header from './components/Header';
 import FilterBy from './components/FilterBy';
+import Wrapper from 'components/Wrapper';
 import {filterSVG, downArrowSVG, plusSVG} from "./images/index";
+import './styles/trumps/_align.scss';
+import axios from 'axios';
 
 const filterBy = () => {
   <FilterBy />
@@ -16,6 +19,7 @@ const seeMore = () => {};
 
 function App() {
 
+
   return (
     <>
       <Header />
@@ -25,8 +29,8 @@ function App() {
           <header className='filter__header'>
             <h1>Invoices - X</h1>
             <div className='filter__button--wrapper'>
-              <Button class={'filter-button'} type="button" text={'Filter'} svg={filterSVG} onClick={filterResults}/>
-              <Button class={'button--rounded'} type="button" text={'New Invoice'} svg={plusSVG} onClick={createNewInvoice}/>
+              <Button variant="link" type="button" text={'Filter'} icon={{svg: filterSVG, side:'right'}} onClick={filterResults}/>
+              <Button variant="rounded" type="button" color="primary" text={'New Invoice'} icon={{svg: plusSVG, side:'left'}} onClick={createNewInvoice}/>
             </div>
           </header>
 
@@ -34,7 +38,7 @@ function App() {
         
         
         <InvoiceCardsList />
-        <Button class={'link arrow-button align--center'} type="button" text={'See more invoices'} svg={downArrowSVG} onClick={seeMore} />
+        <Button pdAmount="05rem" variant="link" alignment="center" type="button" color="primary" text={'See more invoices'} icon={{svg: downArrowSVG, side:'left'}} onClick={seeMore} />
         
       </main>
 

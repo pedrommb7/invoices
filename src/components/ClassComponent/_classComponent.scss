@@ -20,26 +20,26 @@
   }
 
   &--success {
-    color: $color-success;
+    color: $success;
 
     &::before {
-      background-color: $color-success;
+      background-color: $success;
     }
   }
 
   &--warning {
-    color: $color-warning;
+    color: $warning;
 
     &::before {
-      background-color: $color-warning;
+      background-color: $warning;
     }
   }
 
   &--danger {
-    color: $color-danger;
+    color: $danger;
 
     &::before {
-      background-color: $color-danger;
+      background-color: $danger;
     }
   }
 }

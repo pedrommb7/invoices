@@ -9,8 +9,6 @@ const darkMode = () => {}
 
 const Header = () => {
 
-
-
   return (
     <header>
         <nav className='nav-header'>
@@ -19,7 +17,7 @@ const Header = () => {
             <div className='hamburguer__half-line' />
             <div></div>
           </button>
-          <Button class='mg--26' type='button' svg={moonSVG} onClick={darkMode} />
+          <Button mgAmount='26' type='button' icon={{svg: moonSVG}} onClick={darkMode} />
           
         </nav>
     </header>
