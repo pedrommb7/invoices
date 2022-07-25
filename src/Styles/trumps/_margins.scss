@@ -8,8 +8,18 @@
     margin-right: 26px;
   }
 
+  &--lr-2rem {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   &--tb-1rem {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  &--tb-2rem {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }

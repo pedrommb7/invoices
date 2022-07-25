@@ -1,13 +1,13 @@
 import React from 'react'
-import {CLASS_TYPE} from '../common'
+import {INVOICE_TYPE} from '../common'
 import './_classComponent.scss';
 
-type StatusClass = {
-    class: CLASS_TYPE;
+type ClassComponent = {
+    class: INVOICE_TYPE;
     text: string;
 }
 
-const ClassComponent = (property: StatusClass) => {
+const ClassComponent = (property: ClassComponent) => {
   return (
     <p className={`tag tag--${property.class}`}>{property.text}</p>
   )

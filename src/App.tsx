@@ -6,7 +6,7 @@ import FilterBy from './components/FilterBy';
 import Wrapper from 'components/Wrapper';
 import {filterSVG, downArrowSVG, plusSVG} from "./images/index";
 import './styles/trumps/_align.scss';
-import axios from 'axios';
+import './styles/trumps/_flexflow.scss';
 
 const filterBy = () => {
   <FilterBy />
@@ -29,8 +29,8 @@ function App() {
           <header className='filter__header'>
             <h1>Invoices - X</h1>
             <div className='filter__button--wrapper'>
-              <Button variant="link" type="button" text={'Filter'} icon={{svg: filterSVG, side:'right'}} onClick={filterResults}/>
-              <Button variant="rounded" type="button" color="primary" text={'New Invoice'} icon={{svg: plusSVG, side:'left'}} onClick={createNewInvoice}/>
+              <Button variant="link" alignment="center" flexflow='row-reverse' type="button" text={'Filter'} icon={{svg: filterSVG, side:'right'}} onClick={filterResults}/>
+              <Button variant="primary" type="button" color="primary" text={'New Invoice'} icon={{svg: plusSVG, side:'left'}} onClick={createNewInvoice}/>
             </div>
           </header>
 
@@ -38,7 +38,7 @@ function App() {
         
         
         <InvoiceCardsList />
-        <Button pdAmount="05rem" variant="link" alignment="center" type="button" color="primary" text={'See more invoices'} icon={{svg: downArrowSVG, side:'left'}} onClick={seeMore} />
+        <Button mgAmount='tb-2rem' pdAmount="05rem" variant="link" alignment="center" type="button" color="primary" text={'See more invoices'} icon={{svg: downArrowSVG, side:'left'}} onClick={seeMore} />
         
       </main>
 

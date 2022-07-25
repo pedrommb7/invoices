@@ -1,5 +1,4 @@
 @import "./base/index.scss";
-@import "./components/index.scss";
 @import "./generic/fonts.scss";
 @import "./settings/index.scss";
 @import "./tools/mixins.scss";
@@ -42,6 +41,14 @@ h1 {
     margin-right: 2.5rem;
   }
 
+  .filter__button--wrapper {
+    margin: 0 26px;
+
+    :nth-child(1) {
+      margin: 0 2rem;
+    }
+  }
+
   h1 {
     margin: 0 26px;
     font-size: 2rem;
@@ -61,6 +68,10 @@ h1 {
 
   .filter__button--wrapper {
     margin: 0 26px;
+
+    :nth-child(1) {
+      margin: 0 2rem;
+    }
   }
 
   h1 {

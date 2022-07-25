@@ -1,7 +1,7 @@
 import "./_invoiceCard.scss";
 import "../../styles/trumps/_margins.scss"
 import ClassComponent from "components/ClassComponent/ClassComponent";
-import { InvoiceToShow, INVOICE_STATE, CLASS_TYPE } from "../common";
+import { InvoiceToShow, INVOICE_STATE, INVOICE_TYPE } from "../common";
 
 interface InvoiceCard {
   data: InvoiceToShow;
@@ -15,13 +15,13 @@ const InvoiceCard = (property: InvoiceCard) => {
   const stateStyling = () => {
     switch(state) {
       case INVOICE_STATE.PAID:
-        return CLASS_TYPE.SUCCESS;
+        return INVOICE_TYPE.SUCCESS;
       
       case INVOICE_STATE.PENDING:
-        return CLASS_TYPE.WARNING;
+        return INVOICE_TYPE.WARNING;
       
       default:
-        return CLASS_TYPE.DANGER;
+        return INVOICE_TYPE.DANGER;
     }
   }
 

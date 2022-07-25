@@ -14,7 +14,7 @@ const Header = () => {
         <nav className='nav-header'>
           <button type="button" className='hamburguer mg--26 hide--lg'>
             <div></div>
-            <div className='hamburguer__half-line' />
+            <div></div>
             <div></div>
           </button>
           <Button mgAmount='26' type='button' icon={{svg: moonSVG}} onClick={darkMode} />

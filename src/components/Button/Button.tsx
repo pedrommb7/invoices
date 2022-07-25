@@ -1,18 +1,17 @@
 import React from "react";
-import "./_newInvoiceButton.scss";
+import "../../styles/trumps/_button.scss";
 import {ButtonProperties} from '../common';
 import "../../styles/settings/_colors.scss";
 
-
 const Button = (property: ButtonProperties) => {
 
-  const {variant, type, text, alignment, mgAmount, pdAmount, color, icon, onClick} = property
+  const {variant, type, text, alignment, flexflow, mgAmount, pdAmount, color, icon, onClick} = property
 
   return (
     <>
       <button
         type={type}
-        className={`button--${variant} align--${alignment} margin--${mgAmount} padding--${pdAmount} color--${color}`}
+        className={`button--${variant} align--${alignment} flex-flow--${flexflow} mg--${mgAmount} pd--${pdAmount} color--${color}`}
         onClick={() => onClick()}
       >
         <>

@@ -10,10 +10,11 @@ export interface InvoiceToShow {
 }
 
 export interface ButtonProperties {
-  variant?: "rounded" | "large" | "link";
+  variant?: "primary" | "pill" | "add" | "link";
   type: "submit" | "button";
   alignment?: "center" | "between"
-  mgAmount?: "26" | "lr-26" | "tb-1rem";
+  flexflow?: "row-reverse" | "column-reverse"
+  mgAmount?: "26" | "lr-26" | "lr-2rem" | "tb-1rem" | "tb-2rem";
   pdAmount?: "05rem" | "tp-15rem" | "bt-2rem";
   color?: "primary" | "secondary" | "success" | "warning" | "danger";
   text?: string;
@@ -21,11 +22,11 @@ export interface ButtonProperties {
   onClick: () => void;
 }
 
-export enum CLASS_TYPE {
+export enum INVOICE_TYPE {
     SUCCESS = 'success',
     WARNING = 'warning',
     DANGER = 'danger',
-    BUTTONROUNDED = 'button--rounded'
+    BUTTONPRIMARY = 'button--primary'
 }
 
 export enum INVOICE_STATE {
