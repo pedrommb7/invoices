@@ -4,11 +4,6 @@
 @import "./tools/mixins.scss";
 @import "./trumps/index.scss";
 
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -37,10 +32,6 @@ h1 {
     margin: 26px 0;
   }
 
-  .filter-button {
-    margin-right: 2.5rem;
-  }
-
   .filter__button--wrapper {
     margin: 0 26px;
 
@@ -56,10 +47,6 @@ h1 {
 }
 
 @media (min-width: $breakpoint-desktop) {
-  .nav-header {
-    justify-content: flex-end;
-  }
-
   .filter__header {
     justify-content: space-between;
     align-items: center;

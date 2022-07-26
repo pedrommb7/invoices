@@ -3,7 +3,7 @@ import { moonSVG } from '../images/index'
 import Button from './Button/Button'
 import "../styles/trumps/_hide.scss"
 import "../styles/trumps/_margins.scss"
-import axios from 'axios'
+import "./_header.scss"
 
 const darkMode = () => {}
 

@@ -1,6 +1,0 @@
-@import "../../styles/tools/mixins";
-
-.filter-button {
-  @include align-horizontally;
-  flex-flow: row-reverse;
-}

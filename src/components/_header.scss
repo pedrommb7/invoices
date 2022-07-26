@@ -1,0 +1,12 @@
+@import "../styles/settings/breakpoints";
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .nav-header {
+    justify-content: flex-end;
+  }
+}

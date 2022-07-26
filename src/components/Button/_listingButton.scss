@@ -44,9 +44,3 @@
     }
   }
 }
-
-@media (min-width: $breakpoint-desktop) {
-  .hide {
-    @include hide;
-  }
-}
