@@ -1,0 +1,45 @@
+@import "../../styles/settings/colors";
+
+.tag {
+  position: relative;
+  padding-left: 1rem;
+  font-weight: 600;
+
+  &::before {
+    //status symbol: paid, pending or canceled
+    border-radius: 50px;
+    content: "";
+    display: inline-block;
+    height: 0.75rem;
+    width: 0.75rem;
+    left: 0;
+    margin-right: 0.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--success {
+    color: $success;
+
+    &::before {
+      background-color: $success;
+    }
+  }
+
+  &--warning {
+    color: $warning;
+
+    &::before {
+      background-color: $warning;
+    }
+  }
+
+  &--danger {
+    color: $danger;
+
+    &::before {
+      background-color: $danger;
+    }
+  }
+}

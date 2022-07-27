@@ -1,0 +1,19 @@
+@import "../settings/breakpoints";
+
+.hide {
+  &--sm {
+    display: none;
+  }
+
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+    &--md {
+      display: none;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &--lg {
+      display: none;
+    }
+  }
+}
