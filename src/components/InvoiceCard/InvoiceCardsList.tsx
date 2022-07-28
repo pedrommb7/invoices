@@ -1,62 +1,60 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import InvoiceCard from './InvoiceCard';
-import { InvoiceToShow } from '../common';
+import InvoiceCard from "./InvoiceCard";
+import { InvoiceToShow } from "../common";
+import { getCardList } from "components/InvoiceCard/actions";
+import Button from "components/Button/Button";
+import { filterSVG, plusSVG } from "images";
+
+const filterResults = () => {};
+const createNewInvoice = () => {};
 
 const InvoiceCardsList = () => {
-
-  const [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
+  let [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
+  let result;
 
   useEffect(() => {
-    getCardList();
+    getCardList().then((anotherResult) => {
+      setcardListing(anotherResult);
+    });
   }, []);
 
-  const getCardList = async () => {
-    try {
-      const result = await axios.get(
-        "https://invoice-api-exercise.herokuapp.com/invoices"
-      );
+  return (
+    <section>
+      <header className="filter__header">
+        <h1>Invoices - {cardListing.length}</h1>
+        <div className="filter__button--wrapper">
+          <Button
+            variant="link"
+            alignment="center"
+            flexflow="row-reverse"
+            type="button"
+            text={"Filter"}
+            icon={{ svg: filterSVG }}
+            onClick={filterResults}
+          />
+          <Button
+            variant="primary"
+            type="button"
+            color="primary"
+            text={"New Invoice"}
+            icon={{ svg: plusSVG }}
+            onClick={createNewInvoice}
+          />
+        </div>
+      </header>
 
-      const invoiceList = [] as InvoiceToShow[];
-
-      result.data.forEach((invoiceData: any) => {
-        invoiceList.push({
-          ID: invoiceData.invoiceId,
-          price: invoiceData.items[0].price,
-          date: formatDate(invoiceData.invoiceDate),
-          state: invoiceData.invoiceState,
-          name: invoiceData.client.name,
-          description: invoiceData.invoiceDescription,
-        });
-      });
-
-      setcardListing(invoiceList);
-
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const formatDate = (date: string) => {
-    const today = new Date(date);
-    const month =  today.getMonth();
-    const m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-
-    return "Due " + today.getDate() + " " + m[month] + " " + today.getFullYear();
-  }
-  
-    return (
       <ul>
         {cardListing.map((element, index) => {
-            return (
-              <li key={index}>
-                <InvoiceCard data={element}/>
-              </li> 
-            )        
-          
+          return (
+            <li key={index}>
+              <InvoiceCard data={element} />
+            </li>
+          );
         })}
       </ul>
-    )
-  }
+    </section>
+  );
+};
 
-export default InvoiceCardsList
+export default InvoiceCardsList;

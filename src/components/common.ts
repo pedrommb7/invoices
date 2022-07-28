@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface InvoiceToShow {
   ID: string;
   price: number;
@@ -18,7 +16,7 @@ export interface ButtonProperties {
   pdAmount?: "05rem" | "tp-15rem" | "bt-2rem";
   color?: "primary" | "secondary" | "success" | "warning" | "danger";
   text?: string;
-  icon: {svg?: JSX.Element, side?: "right" | "left"}
+  icon: {svg?: JSX.Element}
   onClick: () => void;
 }
 
@@ -26,7 +24,6 @@ export enum INVOICE_TYPE {
     SUCCESS = 'success',
     WARNING = 'warning',
     DANGER = 'danger',
-    BUTTONPRIMARY = 'button--primary'
 }
 
 export enum INVOICE_STATE {
