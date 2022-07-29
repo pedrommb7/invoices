@@ -32,14 +32,14 @@ const InvoiceCardsList = () => {
   }, []);
 
   return (
-    <section>
+    <section className="align--vertically">
       <header className="filter__header">
         <h1>Invoices - {cardListing.length}</h1>
 
         <div className="filter__button--wrapper">
           <Button
             variant="link"
-            alignment="center"
+            alignment="center-horizontally"
             flexflow="row-reverse"
             type="button"
             text={"Filter"}
@@ -71,7 +71,7 @@ const InvoiceCardsList = () => {
         mgAmount="tb-2rem"
         pdAmount="05rem"
         variant="link"
-        alignment="center"
+        alignment="center-horizontally"
         type="button"
         color="primary"
         text={"See more invoices"}
