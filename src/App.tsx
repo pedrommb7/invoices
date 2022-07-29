@@ -2,14 +2,10 @@ import "./styles/main.scss";
 import Button from "components/Button/Button";
 import InvoiceCardsList from "./components/InvoiceCard/InvoiceCardsList";
 import Header from "./components/Header";
-import FilterBy from "./components/FilterBy/FilterBy";
-import { filterSVG, downArrowSVG, plusSVG } from "./images/index";
+import { downArrowSVG } from "./images/index";
 import "./styles/trumps/_align.scss";
 import "./styles/trumps/_flexflow.scss";
 
-const filterResults = () => {
-  <FilterBy />;
-};
 const createNewInvoice = () => {};
 const seeMore = () => {};
 

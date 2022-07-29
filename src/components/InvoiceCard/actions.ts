@@ -18,7 +18,6 @@ export const getCardList = async () => {
             description: invoiceData.invoiceDescription,
           });
         });
-        console.log(invoiceList);
         return invoiceList;
       });
 

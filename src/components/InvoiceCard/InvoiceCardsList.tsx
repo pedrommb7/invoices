@@ -5,24 +5,37 @@ import { InvoiceToShow } from "../common";
 import { getCardList } from "components/InvoiceCard/actions";
 import Button from "components/Button/Button";
 import { filterSVG, plusSVG } from "images";
+import FilterBy from "components/FilterBy/FilterBy";
 
-const filterResults = () => {};
 const createNewInvoice = () => {};
 
 const InvoiceCardsList = () => {
   let [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
-  let result;
+  let [statefilterWindow, setStatefilterWindow] = useState(false);
+
+  const FilterResults = () => {
+    setStatefilterWindow((current) => !current);
+    if (statefilterWindow === true) {
+      <FilterBy />;
+    }
+  };
 
   useEffect(() => {
-    getCardList().then((anotherResult) => {
-      setcardListing(anotherResult);
-    });
+    getCardList().then(
+      (resolve) => {
+        setcardListing(resolve);
+      },
+      (reject) => {
+        console.error(reject);
+      }
+    );
   }, []);
 
   return (
     <section>
       <header className="filter__header">
         <h1>Invoices - {cardListing.length}</h1>
+
         <div className="filter__button--wrapper">
           <Button
             variant="link"
@@ -31,7 +44,7 @@ const InvoiceCardsList = () => {
             type="button"
             text={"Filter"}
             icon={{ svg: filterSVG }}
-            onClick={filterResults}
+            onClick={FilterResults}
           />
           <Button
             variant="primary"
