@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import InvoiceCard from "./InvoiceCard";
 import { InvoiceToShow } from "../common";
 import { getCardList } from "components/InvoiceCard/actions";
 import Button from "components/Button/Button";
-import { filterSVG, plusSVG } from "images";
+import { downArrowSVG, filterSVG, plusSVG } from "images";
 import FilterBy from "components/FilterBy/FilterBy";
 
 const createNewInvoice = () => {};
+const seeMore = () => {};
 
 const InvoiceCardsList = () => {
   let [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
-  let [statefilterWindow, setStatefilterWindow] = useState(false);
+  let [isFilterShown, setIsFilterShown] = useState(false);
 
   const FilterResults = () => {
-    setStatefilterWindow((current) => !current);
-    if (statefilterWindow === true) {
+    setIsFilterShown((current) => !current);
+    if (isFilterShown === true) {
       <FilterBy />;
     }
   };
@@ -43,7 +43,7 @@ const InvoiceCardsList = () => {
             flexflow="row-reverse"
             type="button"
             text={"Filter"}
-            icon={{ svg: filterSVG }}
+            icon={filterSVG}
             onClick={FilterResults}
           />
           <Button
@@ -51,7 +51,7 @@ const InvoiceCardsList = () => {
             type="button"
             color="primary"
             text={"New Invoice"}
-            icon={{ svg: plusSVG }}
+            icon={plusSVG}
             onClick={createNewInvoice}
           />
         </div>
@@ -66,6 +66,18 @@ const InvoiceCardsList = () => {
           );
         })}
       </ul>
+
+      <Button
+        mgAmount="tb-2rem"
+        pdAmount="05rem"
+        variant="link"
+        alignment="center"
+        type="button"
+        color="primary"
+        text={"See more invoices"}
+        icon={downArrowSVG}
+        onClick={seeMore}
+      />
     </section>
   );
 };

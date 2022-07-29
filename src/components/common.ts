@@ -16,7 +16,7 @@ export interface ButtonProperties {
   pdAmount?: "05rem" | "tp-15rem" | "bt-2rem";
   color?: "primary" | "secondary" | "success" | "warning" | "danger";
   text?: string;
-  icon: {svg?: JSX.Element}
+  icon: JSX.Element;
   onClick: () => void;
 }
 

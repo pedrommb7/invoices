@@ -11,7 +11,7 @@ const FilterResults = () => {
         variant="link"
         type="button"
         text="Filters"
-        icon={{ svg: downArrowSVG }}
+        icon={downArrowSVG}
         onClick={returnToHomePage}
       />
     </>
