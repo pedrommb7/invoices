@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import InvoiceCard from "./InvoiceCard";
-import { InvoiceToShow } from "../common";
+import { InvoiceToShow } from "./declarations";
 import { getCardList } from "components/InvoiceCard/actions";
 import Button from "components/Button/Button";
+import FilterBy from "../FilterBy/FilterBy";
 import { downArrowSVG, filterSVG, plusSVG } from "images";
-import FilterBy from "components/FilterBy/FilterBy";
+import "../../styles/trumps/_hide.scss";
 
 const createNewInvoice = () => {};
 const seeMore = () => {};
@@ -16,7 +17,8 @@ const InvoiceCardsList = () => {
   const FilterResults = () => {
     setIsFilterShown((current) => !current);
     if (isFilterShown === true) {
-      <FilterBy />;
+      {
+      }
     }
   };
 
@@ -32,7 +34,7 @@ const InvoiceCardsList = () => {
   }, []);
 
   return (
-    <section className="align--vertically">
+    <section className="align--vertically" id="main-content">
       <header className="filter__header">
         <h1>Invoices - {cardListing.length}</h1>
 
@@ -78,6 +80,9 @@ const InvoiceCardsList = () => {
         icon={downArrowSVG}
         onClick={seeMore}
       />
+
+      <FilterBy />
+      {/* <FilterResults isShown={isFilterShown} /> */}
     </section>
   );
 };

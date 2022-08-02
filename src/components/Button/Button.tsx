@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/trumps/_button.scss";
-import { ButtonProperties } from "../common";
+import { ButtonProperties } from "./declarations";
 import "../../styles/settings/_colors.scss";
 
 const Button = (property: ButtonProperties) => {

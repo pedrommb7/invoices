@@ -1,5 +1,5 @@
 import axios from "axios";
-import { InvoiceToShow } from "../common";
+import { InvoiceToShow } from "./declarations";
 import { formatDate } from "../utils";
 
 export const getCardList = async () => {

@@ -24,6 +24,16 @@
   }
 
   &--pill {
+    /*Alignment*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+    border: 2px solid $primary-light;
+    border-radius: 30px;
+    height: max-content;
+    padding: 12px 20px;
   }
 
   &--add {
