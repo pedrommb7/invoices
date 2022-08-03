@@ -50,6 +50,7 @@ const InvoiceCardsList = () => {
           />
           <Button
             variant="primary"
+            alignment="center-horizontally"
             type="button"
             color="primary"
             text={"New Invoice"}

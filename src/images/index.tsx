@@ -6,7 +6,7 @@ export const downArrowSVG = (
   <svg
     width="12"
     height="8"
-    className="downArrowSVG mg--r-1rem"
+    className="mg--r-1rem"
     viewBox="0 0 12 8"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

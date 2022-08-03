@@ -6,7 +6,6 @@ export interface ButtonProperties {
   mgAmount?: "26" | "lr-26" | "lr-2rem" | "tb-1rem" | "tb-2rem";
   pdAmount?: "05rem" | "tp-15rem" | "bt-2rem" | "tb-075rem" | "lr-125rem";
   color?: "primary" | "secondary" | "black" | "success" | "warning" | "danger";
-  rotation?: "90degrees";
   text?: string;
   icon?: JSX.Element;
   onClick: () => void;
