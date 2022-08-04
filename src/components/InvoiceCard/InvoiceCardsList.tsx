@@ -6,18 +6,22 @@ import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
 import { downArrowSVG, filterSVG, plusSVG } from "images";
 import "../../styles/trumps/_hide.scss";
+import { FilterByProperties } from "components/FilterBy/declarations";
 
 const createNewInvoice = () => {};
 const seeMore = () => {};
 
-const InvoiceCardsList = () => {
+const InvoiceCardsList = (/* properties: FilterByProperties */) => {
   let [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
   let [isFilterShown, setIsFilterShown] = useState(false);
+
+  /* const { isFilterShow, isFilterShownHandler, handleSubmit } = properties; */
 
   const FilterResults = () => {
     setIsFilterShown((current) => !current);
     if (isFilterShown === true) {
       {
+        /* <FilterBy />; */
       }
     }
   };
@@ -49,7 +53,7 @@ const InvoiceCardsList = () => {
             onClick={FilterResults}
           />
           <Button
-            variant="primary"
+            variant="pill"
             alignment="center-horizontally"
             type="button"
             color="primary"
@@ -83,7 +87,7 @@ const InvoiceCardsList = () => {
       />
 
       <FilterBy />
-      {/* <FilterResults isShown={isFilterShown} /> */}
+      {/* <FilterBy isShown={isFilterShown} /> */}
     </section>
   );
 };

@@ -7,5 +7,7 @@ export interface InvoiceFilters {
 }
 
 export interface FilterByProperties {
-    /* isFilterShown: boolean; */
+    isFilterShow: boolean;
+	isFilterShownHandler: (isShow: boolean) => boolean;
+	handleSubmit: (filters: InvoiceFilters) => void;
 }

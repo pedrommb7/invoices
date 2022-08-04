@@ -1,4 +1,5 @@
 @import "../../styles/settings/index.scss";
+@import "../../styles/generic/fonts.scss";
 
 .borderColor {
   &--primary-light {
@@ -9,4 +10,7 @@
 
 select {
   padding: 1rem;
+  font-family: $OpenSans;
+  font-weight: 300;
+  letter-spacing: 1px;
 }

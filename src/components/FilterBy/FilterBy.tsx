@@ -2,16 +2,18 @@ import React from "react";
 import { downArrowSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
+import DatePicker from "components/DatePicker/DatePicker";
 import { FilterByProperties } from "./declarations";
 import "./_filterby.scss";
 import "../../styles/trumps/_align.scss";
 import "../../styles/trumps/_margins.scss";
+import Input from "components/Input/Input";
 
 const returnToHomePage = () => {};
 const activeState = () => {};
 const doSearch = () => {};
 
-const FilterResults = () => {
+const FilterBy = () => {
   return (
     <aside className="filter-page mg--lr-26">
       <Button
@@ -45,21 +47,21 @@ const FilterResults = () => {
         <label htmlFor="">Invoice state</label>
         <div className="align--between mg--t-075rem mg--b-15rem">
           <Button
-            variant="pill"
+            variant="pill-inactive"
             type="button"
             text="Paid"
             alignment="center-horizontally"
             onClick={activeState}
           />
           <Button
-            variant="pill"
+            variant="pill-inactive"
             type="button"
             text="Canceled"
             alignment="center-horizontally"
             onClick={activeState}
           />
           <Button
-            variant="pill"
+            variant="pill-inactive"
             type="button"
             text="Pending"
             alignment="center-horizontally"
@@ -69,26 +71,35 @@ const FilterResults = () => {
       </section>
 
       <label htmlFor="">Invoice date</label>
-      {/* Calendar */}
+      {/* <DatePicker DatePicker={undefined} /> */}
 
-      <section className="align--vertically mg--tb-15rem">
+      <section className="align--vertically mg--t-15rem">
         <label htmlFor="" className="mg--b-075rem">
           Client
         </label>
-        <input type="text" placeholder="Type a client name" />
+        <Input
+          type="text"
+          name="name"
+          placeholder="Type a client name"
+          minLength={4}
+          maxLength={20}
+          color="primary-light"
+        />
       </section>
 
-      <Button
-        variant="primary"
-        type="submit"
-        mgAmount="tb-2rem"
-        pdAmount="05rem"
-        onClick={doSearch}
-        text={"Search"}
-        alignment="center-horizontally"
-      />
+      <div className="search align--center-horizontally">
+        <Button
+          variant="primary"
+          type="submit"
+          mgAmount="tb-15rem"
+          pdAmount="lr-6rem"
+          onClick={doSearch}
+          text={"Search"}
+          alignment="center-horizontally"
+        />
+      </div>
     </aside>
   );
 };
 
-export default FilterResults;
+export default FilterBy;

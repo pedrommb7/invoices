@@ -4,30 +4,41 @@
 .button {
   &--primary {
     height: max-content;
-    padding: 4px 8px 4px 4px;
+    background: $secondary;
+    color: #ffffff;
+    border: 2px solid $secondary;
+    border-radius: 16px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+
+    &:active {
+      background: $secondary;
+      border: 2px solid $secondary;
+    }
+  }
+
+  &--pill {
+    height: max-content;
     color: #ffffff;
     background: $primary;
     border-radius: 31px;
     font-weight: 600;
     line-height: 1.5rem;
     font-size: 1rem;
-    margin: 0;
+    letter-spacing: 1px;
+    padding: 4px 8px 4px 4px;
+
+    &-inactive {
+      background: #ffffff;
+      border: 2px solid $primary-light;
+      border-radius: 30px;
+      height: max-content;
+      padding: 12px 20px;
+    }
 
     &-bgnone {
       background: none;
-    }
-  }
-
-  &--pill {
-    background: #ffffff;
-    border: 2px solid $primary-light;
-    border-radius: 30px;
-    height: max-content;
-    padding: 12px 20px;
-
-    &:active {
-      background: $secondary;
-      border: 2px solid $secondary;
     }
   }
 
