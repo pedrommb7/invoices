@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { downArrowSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
-import DatePicker from "components/DatePicker/DatePicker";
-import { FilterByProperties } from "./declarations";
 import "./_filterby.scss";
+import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_align.scss";
 import "../../styles/trumps/_margins.scss";
 import Input from "components/Input/Input";
 
-const returnToHomePage = () => {};
 const activeState = () => {};
 const doSearch = () => {};
 
 const FilterBy = () => {
+  let [isFilterShown, setIsFilterShown] = useState(true);
+
   return (
-    <aside className="filter-page mg--lr-26">
-      <Button
+    <aside
+      className={`filter-page mg--lr-26 ${isFilterShown ? "" : "hide--sm"}`}
+    >
+      {/* <Button
         variant="link"
         type="button"
         text="Filters"
@@ -24,7 +26,15 @@ const FilterBy = () => {
         alignment="center-horizontally"
         icon={downArrowSVG}
         onClick={returnToHomePage}
-      />
+      /> */}
+      <button
+        type="button"
+        className="align--center-horizontally color--black"
+        onClick={() => setIsFilterShown(false)}
+      >
+        {downArrowSVG}
+        Filters
+      </button>
 
       <section className="align--vertically mg--tb-2rem">
         <label htmlFor="invoice" className="mg--b-075rem">
@@ -71,7 +81,7 @@ const FilterBy = () => {
       </section>
 
       <label htmlFor="">Invoice date</label>
-      {/* <DatePicker DatePicker={undefined} /> */}
+      {/* Calendar */}
 
       <section className="align--vertically mg--t-15rem">
         <label htmlFor="" className="mg--b-075rem">

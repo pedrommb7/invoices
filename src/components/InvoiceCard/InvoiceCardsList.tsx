@@ -6,25 +6,15 @@ import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
 import { downArrowSVG, filterSVG, plusSVG } from "images";
 import "../../styles/trumps/_hide.scss";
-import { FilterByProperties } from "components/FilterBy/declarations";
 
 const createNewInvoice = () => {};
-const seeMore = () => {};
 
-const InvoiceCardsList = (/* properties: FilterByProperties */) => {
+const InvoiceCardsList = () => {
   let [cardListing, setcardListing] = useState([] as InvoiceToShow[]);
   let [isFilterShown, setIsFilterShown] = useState(false);
+  let [isSeeMoreClicked, setIsSeeMoreClicked] = useState(false);
 
-  /* const { isFilterShow, isFilterShownHandler, handleSubmit } = properties; */
-
-  const FilterResults = () => {
-    setIsFilterShown((current) => !current);
-    if (isFilterShown === true) {
-      {
-        /* <FilterBy />; */
-      }
-    }
-  };
+  const FilterResults = () => setIsFilterShown(true);
 
   useEffect(() => {
     getCardList().then(
@@ -36,6 +26,10 @@ const InvoiceCardsList = (/* properties: FilterByProperties */) => {
       }
     );
   }, []);
+
+  const SeeMore = () => {
+    setIsSeeMoreClicked(true);
+  };
 
   return (
     <section className="align--vertically" id="main-content">
@@ -83,11 +77,10 @@ const InvoiceCardsList = (/* properties: FilterByProperties */) => {
         color="primary"
         text={"See more invoices"}
         icon={downArrowSVG}
-        onClick={seeMore}
+        onClick={SeeMore}
       />
 
-      <FilterBy />
-      {/* <FilterBy isShown={isFilterShown} /> */}
+      {isFilterShown && <FilterBy />}
     </section>
   );
 };

@@ -8,6 +8,6 @@ export interface InvoiceFilters {
 
 export interface FilterByProperties {
     isFilterShow: boolean;
-	isFilterShownHandler: (isShow: boolean) => boolean;
+	isFilterShownHandler: (isShow: boolean) => void;
 	handleSubmit: (filters: InvoiceFilters) => void;
 }
