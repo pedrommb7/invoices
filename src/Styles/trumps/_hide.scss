@@ -5,6 +5,21 @@
     display: none;
   }
 
+  &--withAnimation {
+    animation: moveInRight 900ms ease-in-out;
+    animation-delay: 10ms;
+  }
+
+  @keyframes moveInRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(5000px);
+      display: none;
+    }
+  }
+
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
     &--md {
       display: none;

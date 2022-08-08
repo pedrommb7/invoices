@@ -6,6 +6,7 @@ import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
 import { downArrowSVG, filterSVG, plusSVG } from "images";
 import "../../styles/trumps/_hide.scss";
+import "./_invoiceCardList.scss";
 
 const createNewInvoice = () => {};
 
@@ -32,7 +33,7 @@ const InvoiceCardsList = () => {
   };
 
   return (
-    <section className="align--vertically" id="main-content">
+    <section className="align--vertically main-content">
       <header className="filter__header">
         <h1>Invoices - {cardListing.length}</h1>
 
@@ -76,6 +77,7 @@ const InvoiceCardsList = () => {
         type="button"
         color="primary"
         text={"See more invoices"}
+        flexflow="row-reverse"
         icon={downArrowSVG}
         onClick={SeeMore}
       />

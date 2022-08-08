@@ -7,3 +7,19 @@
 .search button {
   padding: 0.75rem 6rem;
 }
+
+.filter-page {
+  animation: moveInLeft 900ms ease-in-out;
+  animation-delay: 10ms;
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(5000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

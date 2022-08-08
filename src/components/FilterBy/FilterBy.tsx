@@ -16,7 +16,9 @@ const FilterBy = () => {
 
   return (
     <aside
-      className={`filter-page mg--lr-26 ${isFilterShown ? "" : "hide--sm"}`}
+      className={`filter-page mg--lr-26 ${
+        isFilterShown ? "" : "hide--withAnimation"
+      }`}
     >
       {/* <Button
         variant="link"
@@ -29,7 +31,7 @@ const FilterBy = () => {
       /> */}
       <button
         type="button"
-        className="align--center-horizontally color--black"
+        className="button--link align--center-horizontally color--black"
         onClick={() => setIsFilterShown(false)}
       >
         {downArrowSVG}

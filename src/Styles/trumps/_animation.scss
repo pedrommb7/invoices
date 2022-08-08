@@ -1,0 +1,13 @@
+.animation {
+  animation: moveInRight 300ms ease-in-out;
+  animation-delay: 10ms;
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
