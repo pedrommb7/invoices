@@ -1,6 +1,6 @@
 import "./styles/main.scss";
 import InvoiceCardsList from "./components/InvoiceCard/InvoiceCardsList";
-import Header from "./components/Header";
+import Header from "components/Header/Header";
 
 function App() {
   return (
