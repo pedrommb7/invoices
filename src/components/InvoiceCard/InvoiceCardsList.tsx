@@ -15,8 +15,6 @@ const InvoiceCardsList = () => {
   let [isFilterShown, setIsFilterShown] = useState(false);
   let [isSeeMoreClicked, setIsSeeMoreClicked] = useState(false);
 
-  const FilterResults = () => setIsFilterShown(true);
-
   useEffect(() => {
     getCardList().then(
       (resolve) => {
@@ -33,7 +31,7 @@ const InvoiceCardsList = () => {
   };
 
   return (
-    <section className="align--vertically main-content">
+    <section className="align--vertically" id="main-content">
       <header className="filter__header">
         <h1>Invoices - {cardListing.length}</h1>
 
@@ -45,7 +43,7 @@ const InvoiceCardsList = () => {
             type="button"
             text={"Filter"}
             icon={filterSVG}
-            onClick={FilterResults}
+            onClick={() => setIsFilterShown(true)}
           />
           <Button
             variant="pill"
