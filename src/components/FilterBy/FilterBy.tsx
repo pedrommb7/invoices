@@ -7,8 +7,9 @@ import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_align.scss";
 import "../../styles/trumps/_margins.scss";
 import "../../styles/trumps/_padding.scss";
+import "../../styles/trumps/_animation.scss";
 import Input from "components/Input/Input";
-import Calendar from "components/Calendar/Calendar";
+import RangeCalendar from "components/Calendar/RangeCalendar";
 
 const activeState = () => {};
 const doSearch = () => {};
@@ -18,7 +19,7 @@ const FilterBy = () => {
 
   return (
     <aside
-      className={`filter-page mg--lr-26 ${
+      className={`pd--26 filter-page ${
         isFilterShown ? "" : "hide--withAnimation"
       }`}
     >
@@ -37,7 +38,7 @@ const FilterBy = () => {
         onClick={() => setIsFilterShown(false)}
       >
         {downArrowSVG}
-        Filters
+        <span className="mg--l-1rem">Filters</span>
       </button>
 
       <section className="align--vertically mg--tb-2rem">
@@ -86,7 +87,7 @@ const FilterBy = () => {
 
       <section>
         <label htmlFor="">Invoice date</label>
-        <Calendar />
+        <RangeCalendar />
       </section>
 
       <section className="align--vertically mg--t-15rem">
@@ -110,7 +111,7 @@ const FilterBy = () => {
           mgAmount="tb-15rem"
           pdAmount="lr-6rem"
           onClick={doSearch}
-          text={"Search"}
+          text="Search"
           alignment="center-horizontally"
         />
       </div>

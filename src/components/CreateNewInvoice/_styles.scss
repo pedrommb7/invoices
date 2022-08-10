@@ -1,0 +1,40 @@
+@import "../../styles/settings/_colors.scss";
+
+.breadcrumb {
+  &:nth-child(1) {
+    margin-right: 1rem;
+  }
+
+  &:nth-child(2) {
+    margin-left: 1rem;
+  }
+}
+
+.steps {
+  font-size: 14px;
+
+  button {
+    color: $light-grey;
+
+    &:focus {
+      color: $secondary;
+    }
+  }
+}
+
+label {
+  margin-bottom: 0.75rem;
+}
+
+form {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+  margin-top: 2rem;
+
+  .genericInfo > p {
+    margin-top: 0;
+  }
+}

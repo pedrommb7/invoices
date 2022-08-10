@@ -4,7 +4,7 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import "./_styles.scss";
 
-const Calendar = () => {
+const RangeCalendar = () => {
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -22,4 +22,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default RangeCalendar;

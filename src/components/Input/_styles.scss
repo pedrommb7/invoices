@@ -1,6 +1,10 @@
 @import "../../styles/settings/index.scss";
 @import "../../styles/generic/fonts.scss";
 
+label {
+  margin-bottom: 0.75rem;
+}
+
 .borderColor {
   &--primary-light {
     border: 2px solid $primary-light;

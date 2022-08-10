@@ -6,7 +6,7 @@ const Select = (properties: SelectProperties) => {
   const { name, id, color, options } = properties;
 
   return (
-    <select name={name} id={id} className={`borderColor--${color} selectdiv`}>
+    <select name={name} id={id} className={`borderColor--${color}`}>
       {options.map((option, index) => {
         return (
           <option key={index} value={option.value}>

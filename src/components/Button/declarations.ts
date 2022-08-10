@@ -8,5 +8,6 @@ export interface ButtonProperties {
   color?: "primary" | "secondary" | "black" | "success" | "warning" | "danger";
   text?: string;
   icon?: JSX.Element;
+  id?: string;
   onClick: () => void;
 }
