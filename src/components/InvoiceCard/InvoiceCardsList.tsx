@@ -6,6 +6,7 @@ import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
 import { downArrowSVG, filterSVG, plusSVG } from "images";
 import "../../styles/trumps/_hide.scss";
+import "../../styles/trumps/_colors.scss";
 import "./_invoiceCardList.scss";
 import CreateNewInvoice from "components/CreateNewInvoice/CreateNewInvoice";
 
@@ -35,6 +36,11 @@ const InvoiceCardsList = () => {
     document.getElementById("InvoicesNR")?.classList.add("hide--sm");
   };
 
+  const GoToCreateNewInvoice = () => {
+    setIsNewInvoice(true);
+    document.getElementById("createInvoice")?.classList.add("color--secondary");
+  };
+
   return (
     <section className="align--vertically" id="main-content">
       <header className="filter__header">
@@ -59,7 +65,7 @@ const InvoiceCardsList = () => {
             text="New Invoice"
             icon={plusSVG}
             id="NewInvoiceButton"
-            onClick={() => setIsNewInvoice(true)}
+            onClick={GoToCreateNewInvoice}
           />
         </div>
       </header>

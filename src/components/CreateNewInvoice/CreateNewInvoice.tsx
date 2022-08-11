@@ -33,32 +33,46 @@ const CreateNewInvoice = () => {
           variant="link"
           type="button"
           text="Create invoice"
+          id="createInvoice"
           onClick={ReloadNewInvoice}
         />
       </section>
 
       <h2>Create New Invoice</h2>
 
-      <section className="steps align--center-horizontally">
-        <Button
-          variant="link"
-          type="button"
-          text="Invoice Details"
-          onClick={ReloadInvoiceDetails}
-        />
-        <Button
-          variant="link"
-          type="button"
-          text="Client Details"
-          mgAmount="lr-2rem"
-          onClick={ReloadClientDetails}
-        />
-        <Button
-          variant="link"
-          type="button"
-          text="Invoice items"
-          onClick={ReloadInvoiceItems}
-        />
+      <section className="steps align--between">
+        <div className="align--vertically">
+          <Button
+            variant="link"
+            type="button"
+            text="Invoice Details"
+            id="invoiceDetails"
+            onClick={ReloadInvoiceDetails}
+          />
+          <div className="horizontal-line"></div>
+        </div>
+
+        <div className="align--vertically">
+          <Button
+            variant="link"
+            type="button"
+            text="Client Details"
+            id="clientDetails"
+            onClick={ReloadClientDetails}
+          />
+          <div className="horizontal-line"></div>
+        </div>
+
+        <div className="align--vertically">
+          <Button
+            variant="link"
+            type="button"
+            text="Invoice items"
+            id="invoiceItems"
+            onClick={ReloadInvoiceItems}
+          />
+          <div className="horizontal-line"></div>
+        </div>
       </section>
 
       <form action="">
@@ -83,18 +97,22 @@ const CreateNewInvoice = () => {
               name="invoiceState"
               id="invoiceState"
               color="primary-light"
-              options={[]}
+              options={[
+                { key: "Paid", value: "paid" },
+                { key: "Pending", value: "pending" },
+                { key: "Canceled", value: "canceled" },
+              ]}
             />
           </div>
 
           <div className="align--vertically mg--tb-1rem">
             <label htmlFor="">Invoice Date</label>
-            <PickerCalendar />
+            <Input type="date" name="invoiceDate" color="primary-light" />
           </div>
 
           <div className="align--vertically mg--tb-1rem">
             <label htmlFor="">Payment Due Date</label>
-            <PickerCalendar />
+            <Input type="date" name="invoiceDate" color="primary-light" />
           </div>
         </div>
 
@@ -113,24 +131,28 @@ const CreateNewInvoice = () => {
             />
           </div>
 
-          <div className="align--center-horizontally cityZipCode">
-            <label htmlFor="">City</label>
-            <Input
-              type="text"
-              name="city"
-              minLength={4}
-              maxLength={25}
-              color="primary-light"
-            />
+          <div className="align--between cityZipCode">
+            <div className="align--vertically mg--tb-1rem">
+              <label htmlFor="">City</label>
+              <Input
+                type="text"
+                name="city"
+                minLength={4}
+                maxLength={25}
+                color="primary-light"
+              />
+            </div>
 
-            <label htmlFor="">Zip Code</label>
-            <Input
-              type="text"
-              name="city"
-              minLength={4}
-              maxLength={20}
-              color="primary-light"
-            />
+            <div className="align--vertically mg--tb-1rem">
+              <label htmlFor="">Zip Code</label>
+              <Input
+                type="text"
+                name="city"
+                minLength={4}
+                maxLength={20}
+                color="primary-light"
+              />
+            </div>
           </div>
 
           <div className="align--vertically mg--tb-1rem">
@@ -145,7 +167,7 @@ const CreateNewInvoice = () => {
           </div>
         </div>
 
-        <div className="align--center-horizontally">
+        <div className="continue align--center-horizontally">
           <Button
             variant="primary"
             type="submit"

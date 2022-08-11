@@ -17,4 +17,9 @@ input {
   font-family: $OpenSans;
   font-weight: 300;
   letter-spacing: 1px;
+
+  &:focus {
+    border: 2px solid $primary-light;
+    border-radius: 10px;
+  }
 }
