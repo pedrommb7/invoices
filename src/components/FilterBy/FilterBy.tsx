@@ -20,7 +20,7 @@ const FilterBy = () => {
   return (
     <aside
       className={`pd--26 filter-page ${
-        isFilterShown ? "" : "hide--withAnimation"
+        isFilterShown ? "" : "hide--withMoveIn"
       }`}
     >
       {/* <Button

@@ -1,5 +1,7 @@
 @import "../../styles/settings/colors";
 
+/* animation: name | duration | easing-function | delay */
+
 .filter-page svg {
   transform: rotate(90deg);
 }
@@ -10,8 +12,7 @@
 
 .filter-page {
   background: $body-background;
-  animation: moveInLeft 900ms ease-in-out;
-  animation-delay: 10ms;
+  animation: moveInLeft 900ms ease-in-out 10ms;
   position: absolute;
   z-index: 2;
 }

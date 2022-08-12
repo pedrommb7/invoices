@@ -1,5 +1,38 @@
 @import "../../styles/settings/_colors.scss";
 
+/* animation: name | duration | easing-function | delay */
+
+.new-invoice {
+  background: $body-background;
+  animation: fadeIn 300ms ease-out 10ms;
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.return-homepage {
+  animation: fadeOut 300ms ease-out 10ms;
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .breadcrumb {
   :nth-child(1) {
     margin-right: 1rem;
@@ -20,6 +53,11 @@
   }
 }
 
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .steps {
   font-size: 14px;
   margin-left: 0;
@@ -32,7 +70,7 @@
     }
   }
 
-  .horizontal-line {
+  .underline {
     border: 0;
     height: 1px;
     background: rgba(128, 128, 128, 0.1);
@@ -41,6 +79,7 @@
 
 label {
   margin-bottom: 0.75rem;
+  font-weight: 400;
 }
 
 form {
@@ -65,6 +104,12 @@ form {
     text-transform: uppercase;
   }
 
+  .horizontal-line {
+    height: 1px;
+    background: $light-grey;
+    border-radius: 1px;
+  }
+
   .cityZipCode {
     :nth-child(1) {
       margin-right: 1rem;
@@ -78,4 +123,8 @@ form {
 
 .continue button {
   padding: 0.75rem 6rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color-scheme: $secondary;
 }

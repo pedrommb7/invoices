@@ -1,13 +1,14 @@
 @import "../settings/breakpoints";
 
+/* animation: name | duration | easing-function | delay */
+
 .hide {
   &--sm {
     display: none;
   }
 
-  &--withAnimation {
-    animation: moveInRight 900ms ease-in-out;
-    animation-delay: 10ms;
+  &--withMoveIn {
+    animation: moveInRight 900ms ease-in-out 10ms;
   }
 
   @keyframes moveInRight {
@@ -17,6 +18,19 @@
     100% {
       transform: translateX(5000px);
       display: none;
+    }
+  }
+
+  &--withFadeOut {
+    animation: fadeOut 300ms ease-out 10ms;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 

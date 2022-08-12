@@ -39,6 +39,9 @@ const InvoiceCardsList = () => {
   const GoToCreateNewInvoice = () => {
     setIsNewInvoice(true);
     document.getElementById("createInvoice")?.classList.add("color--secondary");
+    document
+      .getElementById("invoiceDetails")
+      ?.classList.add("color--secondary");
   };
 
   return (

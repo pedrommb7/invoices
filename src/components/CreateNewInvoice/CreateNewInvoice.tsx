@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import PickerCalendar from "components/Calendar/PickerCalendar";
@@ -11,7 +11,6 @@ import "../../styles/trumps/_padding.scss";
 import "../../styles/trumps/_animation.scss";
 import "./_styles.scss";
 
-const ReturnToHomePage = () => {};
 const ReloadNewInvoice = () => {};
 const ReloadInvoiceDetails = () => {};
 const ReloadClientDetails = () => {};
@@ -19,14 +18,20 @@ const ReloadInvoiceItems = () => {};
 const doContinue = () => {};
 
 const CreateNewInvoice = () => {
+  let [isNewInvoiceShown, setIsNewInvoiceShown] = useState(true);
+
   return (
-    <aside className="pd--1rem">
-      <section className="breadcrumb">
+    <aside
+      className={`pd--1rem new-invoice ${
+        isNewInvoiceShown ? "" : "hide--withFadeOut"
+      } `}
+    >
+      <nav className="breadcrumb">
         <Button
           variant="link"
           type="button"
           text="Invoices"
-          onClick={ReturnToHomePage}
+          onClick={() => setIsNewInvoiceShown(false)}
         />
         {downArrowSVG}
         <Button
@@ -36,49 +41,51 @@ const CreateNewInvoice = () => {
           id="createInvoice"
           onClick={ReloadNewInvoice}
         />
-      </section>
+      </nav>
 
-      <h2>Create New Invoice</h2>
+      <header>
+        <h2>Create New Invoice</h2>
 
-      <section className="steps align--between">
-        <div className="align--vertically">
-          <Button
-            variant="link"
-            type="button"
-            text="Invoice Details"
-            id="invoiceDetails"
-            onClick={ReloadInvoiceDetails}
-          />
-          <div className="horizontal-line"></div>
-        </div>
+        <section className="steps align--between">
+          <div className="align--vertically">
+            <Button
+              variant="link"
+              type="button"
+              text="Invoice Details"
+              id="invoiceDetails"
+              onClick={ReloadInvoiceDetails}
+            />
+            <div className="underline"></div>
+          </div>
 
-        <div className="align--vertically">
-          <Button
-            variant="link"
-            type="button"
-            text="Client Details"
-            id="clientDetails"
-            onClick={ReloadClientDetails}
-          />
-          <div className="horizontal-line"></div>
-        </div>
+          <div className="align--vertically">
+            <Button
+              variant="link"
+              type="button"
+              text="Client Details"
+              id="clientDetails"
+              onClick={ReloadClientDetails}
+            />
+            <div className="underline"></div>
+          </div>
 
-        <div className="align--vertically">
-          <Button
-            variant="link"
-            type="button"
-            text="Invoice items"
-            id="invoiceItems"
-            onClick={ReloadInvoiceItems}
-          />
-          <div className="horizontal-line"></div>
-        </div>
-      </section>
+          <div className="align--vertically">
+            <Button
+              variant="link"
+              type="button"
+              text="Invoice items"
+              id="invoiceItems"
+              onClick={ReloadInvoiceItems}
+            />
+            <div className="underline"></div>
+          </div>
+        </section>
+      </header>
 
       <form action="">
         <div className="genericInfo">
           <p>Generic Information</p>
-          <hr />
+          <div className="horizontal-line"></div>
 
           <div className="align--vertically mg--tb-1rem">
             <label htmlFor="">Invoice Description</label>
@@ -118,7 +125,7 @@ const CreateNewInvoice = () => {
 
         <div className="billAddressInfo">
           <p>Billing Address Information</p>
-          <hr />
+          <div className="horizontal-line"></div>
 
           <div className="align--vertically mg--tb-1rem">
             <label htmlFor="">Street</label>
