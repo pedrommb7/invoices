@@ -1,6 +1,6 @@
 @import "../../styles/settings/colors";
 
-/* animation: name | duration | easing-function | delay */
+/* animation: name | duration | easing-function | delay | forwards*/
 
 .filter-page svg {
   transform: rotate(90deg);
@@ -11,14 +11,17 @@
 }
 
 .filter-page {
+  //display: none;
+  height: 100%;
   background: $body-background;
-  animation: moveInLeft 900ms ease-in-out 10ms;
+  animation: moveInLeft 900ms ease-in-out 10ms forwards;
   position: absolute;
   z-index: 2;
 }
 
 @keyframes moveInLeft {
   0% {
+    display: block;
     transform: translateX(5000px);
   }
   100% {

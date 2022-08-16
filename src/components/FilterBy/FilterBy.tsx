@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { downArrowSVG } from "../../images/index";
+import { DownArrowSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
 import "./_filterby.scss";
@@ -8,20 +8,20 @@ import "../../styles/trumps/_align.scss";
 import "../../styles/trumps/_margins.scss";
 import "../../styles/trumps/_padding.scss";
 import "../../styles/trumps/_animation.scss";
+import "../../styles/trumps/_colors.scss";
 import Input from "components/Input/Input";
 import RangeCalendar from "components/Calendar/RangeCalendar";
+import { FilterByProperties } from "./declarations";
 
 const activeState = () => {};
 const doSearch = () => {};
 
-const FilterBy = () => {
-  let [isFilterShown, setIsFilterShown] = useState(true);
-
+const FilterBy = (properties: FilterByProperties) => {
+  const { handleSubmit, isFilterShow, isFilterShownHandler } = properties;
+  console.log(isFilterShow);
   return (
     <aside
-      className={`pd--26 filter-page ${
-        isFilterShown ? "" : "hide--withMoveIn"
-      }`}
+      className={`pd--26 filter-page ${isFilterShow ? "" : "hide--withMoveIn"}`}
     >
       {/* <Button
         variant="link"
@@ -35,9 +35,9 @@ const FilterBy = () => {
       <button
         type="button"
         className="button--link align--center-horizontally color--black"
-        onClick={() => setIsFilterShown(false)}
+        onClick={() => isFilterShownHandler(false)}
       >
-        {downArrowSVG}
+        {<DownArrowSVG className="color--black" />}
         <span className="mg--l-1rem">Filters</span>
       </button>
 

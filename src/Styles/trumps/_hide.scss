@@ -8,16 +8,16 @@
   }
 
   &--withMoveIn {
-    animation: moveInRight 900ms ease-in-out 10ms;
+    animation: moveInRight 900ms ease-in-out 10ms forwards;
   }
 
   @keyframes moveInRight {
     0% {
-      transform: translateX(0px);
+      display: block;
+      transform: translateX(5000px);
     }
     100% {
-      transform: translateX(5000px);
-      display: none;
+      transform: translateX(0px);
     }
   }
 

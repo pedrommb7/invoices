@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
-import PickerCalendar from "components/Calendar/PickerCalendar";
-import { downArrowSVG } from "images";
+import { DownArrowSVG } from "images";
 import Select from "components/Select/Select";
 import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_align.scss";
@@ -33,7 +32,7 @@ const CreateNewInvoice = () => {
           text="Invoices"
           onClick={() => setIsNewInvoiceShown(false)}
         />
-        {downArrowSVG}
+        {<DownArrowSVG />}
         <Button
           variant="link"
           type="button"

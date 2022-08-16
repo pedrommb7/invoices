@@ -4,10 +4,14 @@ import { InvoiceToShow } from "./declarations";
 import { getCardList } from "components/InvoiceCard/actions";
 import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
-import { downArrowSVG, filterSVG, plusSVG } from "images";
+import { DownArrowSVG, filterSVG } from "images";
+import { PlusSVG } from "../../images/index";
 import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_colors.scss";
+import "../../styles/trumps/_align.scss";
+import "../../styles/trumps/_margins.scss";
 import "./_invoiceCardList.scss";
+import "../../images/_styling.scss";
 import CreateNewInvoice from "components/CreateNewInvoice/CreateNewInvoice";
 
 const InvoiceCardsList = () => {
@@ -28,12 +32,6 @@ const InvoiceCardsList = () => {
 
   const GoToFiltersPage = () => {
     setIsFilterShown(true);
-    document.getElementById("header")?.classList.add("hide--sm");
-    document.getElementById("cards")?.classList.add("hide--sm");
-    document.getElementById("SeeMoreInvoices")?.classList.add("hide--sm");
-    document.getElementById("FilterButton")?.classList.add("hide--sm");
-    document.getElementById("NewInvoiceButton")?.classList.add("hide--sm");
-    document.getElementById("InvoicesNR")?.classList.add("hide--sm");
   };
 
   const GoToCreateNewInvoice = () => {
@@ -66,7 +64,7 @@ const InvoiceCardsList = () => {
             type="button"
             color="primary"
             text="New Invoice"
-            icon={plusSVG}
+            icon={<PlusSVG className="plusSVG align--center mg--r-05rem" />}
             id="NewInvoiceButton"
             onClick={GoToCreateNewInvoice}
           />
@@ -92,12 +90,18 @@ const InvoiceCardsList = () => {
         color="primary"
         text="See more invoices"
         flexflow="row-reverse"
-        icon={downArrowSVG}
+        icon={<DownArrowSVG className="color--primary" />}
         id="SeeMoreInvoices"
         onClick={() => console.log(getCardList())}
       />
 
-      {isFilterShown && <FilterBy />}
+      {
+        <FilterBy
+          handleSubmit={() => console.log("Test click")}
+          isFilterShow={isFilterShown}
+          isFilterShownHandler={setIsFilterShown}
+        />
+      }
       {isNewInvoice && <CreateNewInvoice />}
     </section>
   );

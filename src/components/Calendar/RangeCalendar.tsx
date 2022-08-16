@@ -18,6 +18,8 @@ const RangeCalendar = () => {
       onChange={(item) => setState([item.selection])}
       moveRangeOnFirstSelection={false}
       ranges={state}
+      rangeColors={["#9ed8d8"]}
+      className="rdrDateDisplayItemActive"
     />
   );
 };
