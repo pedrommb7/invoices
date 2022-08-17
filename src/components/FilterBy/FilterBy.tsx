@@ -18,10 +18,11 @@ const doSearch = () => {};
 
 const FilterBy = (properties: FilterByProperties) => {
   const { handleSubmit, isFilterShow, isFilterShownHandler } = properties;
-  console.log(isFilterShow);
   return (
     <aside
-      className={`pd--26 filter-page ${isFilterShow ? "" : "hide--withMoveIn"}`}
+      className={`pd--26 filter-page ${
+        isFilterShow ? "transitionMoveInLeft" : ""
+      }`}
     >
       {/* <Button
         variant="link"
@@ -37,7 +38,7 @@ const FilterBy = (properties: FilterByProperties) => {
         className="button--link align--center-horizontally color--black"
         onClick={() => isFilterShownHandler(false)}
       >
-        {<DownArrowSVG className="color--black" />}
+        {<DownArrowSVG className="fill--black" />}
         <span className="mg--l-1rem">Filters</span>
       </button>
 

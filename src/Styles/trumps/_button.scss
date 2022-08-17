@@ -5,49 +5,46 @@
   &--primary {
     height: max-content;
     background: $secondary;
-    color: #ffffff;
-    border: 2px solid $secondary;
+    color: $white;
+    border: 0.125rem solid $secondary;
     border-radius: 16px;
     font-weight: 600;
     line-height: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
   }
 
   &--pill {
     height: max-content;
-    color: #ffffff !important;
+    color: $white;
     background: $primary;
-    border-radius: 31px;
+    border-radius: 1.9375rem;
     font-weight: 600;
     line-height: 1.5rem;
     font-size: 1rem;
-    letter-spacing: 1px;
-    padding: 4px 8px 4px 4px;
+    letter-spacing: 0.0625rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
 
     &:active {
       background: $secondary;
-      border: 2px solid $secondary;
+      border: 0.125rem solid $secondary;
     }
 
     &-inactive {
-      background: #ffffff;
-      border: 2px solid $primary-light;
-      border-radius: 30px;
+      background: $white;
+      border: 0.125rem solid $primary-light;
+      border-radius: 1.875rem;
       height: max-content;
-      padding: 12px 20px;
+      padding: 0.75rem 1.25rem;
 
       &:focus {
         background: $secondary;
-        border: 2px solid $secondary;
+        border: 0.125rem solid $secondary;
       }
     }
 
     &-bgnone {
       background: none;
     }
-  }
-
-  &--add {
   }
 
   &--link {

@@ -2,8 +2,14 @@
 
 /* animation: name | duration | easing-function | delay | forwards*/
 
+aside > button {
+  font-size: 24px;
+}
+
 .filter-page svg {
   transform: rotate(90deg);
+  width: 16.76px;
+  height: 9.88px;
 }
 
 .search button {
@@ -11,17 +17,19 @@
 }
 
 .filter-page {
-  //display: none;
   height: 100%;
   background: $body-background;
-  animation: moveInLeft 900ms ease-in-out 10ms forwards;
+  transform: translateX(5000px);
+}
+
+.transitionMoveInLeft {
+  animation: moveInLeft 600ms ease-in-out 10ms forwards;
   position: absolute;
   z-index: 2;
 }
 
 @keyframes moveInLeft {
   0% {
-    display: block;
     transform: translateX(5000px);
   }
   100% {

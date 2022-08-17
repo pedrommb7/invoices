@@ -3,11 +3,7 @@ import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import { DownArrowSVG } from "images";
 import Select from "components/Select/Select";
-import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_align.scss";
-import "../../styles/trumps/_margins.scss";
-import "../../styles/trumps/_padding.scss";
-import "../../styles/trumps/_animation.scss";
+
 import "./_styles.scss";
 
 const ReloadNewInvoice = () => {};

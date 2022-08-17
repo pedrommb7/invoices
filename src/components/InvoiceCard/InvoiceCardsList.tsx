@@ -10,6 +10,7 @@ import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_colors.scss";
 import "../../styles/trumps/_align.scss";
 import "../../styles/trumps/_margins.scss";
+import "../../styles/trumps/_fill.scss";
 import "./_invoiceCardList.scss";
 import "../../images/_styling.scss";
 import CreateNewInvoice from "components/CreateNewInvoice/CreateNewInvoice";
@@ -62,7 +63,6 @@ const InvoiceCardsList = () => {
             variant="pill"
             alignment="center-horizontally"
             type="button"
-            color="primary"
             text="New Invoice"
             icon={<PlusSVG className="plusSVG align--center mg--r-05rem" />}
             id="NewInvoiceButton"
@@ -90,7 +90,7 @@ const InvoiceCardsList = () => {
         color="primary"
         text="See more invoices"
         flexflow="row-reverse"
-        icon={<DownArrowSVG className="color--primary" />}
+        icon={<DownArrowSVG className="fill--primary mg--l-1rem" />}
         id="SeeMoreInvoices"
         onClick={() => console.log(getCardList())}
       />

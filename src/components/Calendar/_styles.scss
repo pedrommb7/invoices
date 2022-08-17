@@ -1,12 +1,6 @@
 @import "../../styles/settings/_colors.scss";
 
-.width100 {
-  width: 100%;
-}
-
-.borderColor {
-  &--primary-light {
-    border: 2px solid $primary-light;
-    border-radius: 10px;
-  }
+.calendar {
+  border-radius: 10px;
+  margin-top: 0.75rem;
 }

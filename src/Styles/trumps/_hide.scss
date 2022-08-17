@@ -14,10 +14,10 @@
   @keyframes moveInRight {
     0% {
       display: block;
-      transform: translateX(5000px);
+      transform: translateX(0px);
     }
     100% {
-      transform: translateX(0px);
+      transform: translateX(5000px);
     }
   }
 

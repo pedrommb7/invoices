@@ -1,0 +1,11 @@
+@import "../settings/colors";
+
+.fill {
+  &--black {
+    fill: $dark-grey;
+  }
+
+  &--primary {
+    fill: $primary;
+  }
+}

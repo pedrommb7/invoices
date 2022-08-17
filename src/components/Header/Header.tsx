@@ -4,12 +4,13 @@ import Button from "components/Button/Button";
 import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_margins.scss";
 import "./_header.scss";
+import { FilterByProperties } from "components/FilterBy/declarations";
 
 const darkMode = () => {};
 
 const Header = () => {
   return (
-    <header id="header">
+    <header>
       <nav className="nav-header">
         <button type="button" className="hamburguer mg--26 hide--lg">
           <div></div>
