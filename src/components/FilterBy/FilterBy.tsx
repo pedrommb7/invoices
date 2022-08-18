@@ -4,7 +4,7 @@ import Button from "components/Button/Button";
 import Select from "components/Select/Select";
 import "./_filterby.scss";
 import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_align.scss";
+import "../../styles/trumps/_flex.scss";
 import "../../styles/trumps/_margins.scss";
 import "../../styles/trumps/_padding.scss";
 import "../../styles/trumps/_animation.scss";
@@ -35,14 +35,14 @@ const FilterBy = (properties: FilterByProperties) => {
       /> */}
       <button
         type="button"
-        className="button--link align--center-horizontally color--black"
+        className="button--link flex--center-horizontally color--black"
         onClick={() => isFilterShownHandler(false)}
       >
         {<DownArrowSVG className="fill--black" />}
         <span className="mg--l-1rem">Filters</span>
       </button>
 
-      <section className="align--vertically mg--tb-2rem">
+      <section className="flex--vertically mg--tb-2rem">
         <label htmlFor="invoice" className="mg--b-075rem">
           Order by:
         </label>
@@ -61,7 +61,7 @@ const FilterBy = (properties: FilterByProperties) => {
 
       <section>
         <label htmlFor="">Invoice state</label>
-        <div className="align--between mg--t-075rem mg--b-15rem">
+        <div className="flex--between mg--t-075rem mg--b-15rem">
           <Button
             variant="pill-inactive"
             type="button"
@@ -91,7 +91,7 @@ const FilterBy = (properties: FilterByProperties) => {
         <RangeCalendar />
       </section>
 
-      <section className="align--vertically mg--t-15rem">
+      <section className="flex--vertically mg--t-15rem">
         <label htmlFor="" className="mg--b-075rem">
           Client
         </label>
@@ -105,7 +105,7 @@ const FilterBy = (properties: FilterByProperties) => {
         />
       </section>
 
-      <div className="search align--center-horizontally">
+      <div className="search flex--center-horizontally">
         <Button
           variant="primary"
           type="submit"

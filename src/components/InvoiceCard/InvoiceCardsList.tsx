@@ -8,7 +8,7 @@ import { DownArrowSVG, filterSVG } from "images";
 import { PlusSVG } from "../../images/index";
 import "../../styles/trumps/_hide.scss";
 import "../../styles/trumps/_colors.scss";
-import "../../styles/trumps/_align.scss";
+import "../../styles/trumps/_flex.scss";
 import "../../styles/trumps/_margins.scss";
 import "../../styles/trumps/_fill.scss";
 import "./_invoiceCardList.scss";
@@ -44,7 +44,7 @@ const InvoiceCardsList = () => {
   };
 
   return (
-    <section className="align--vertically" id="main-content">
+    <section className="flex--vertically" id="main-content">
       <header className="filter__header">
         <h1 id="InvoicesNR">Invoices - {cardListing.length}</h1>
 
@@ -64,7 +64,7 @@ const InvoiceCardsList = () => {
             alignment="center-horizontally"
             type="button"
             text="New Invoice"
-            icon={<PlusSVG className="plusSVG align--center mg--r-05rem" />}
+            icon={<PlusSVG className="plusSVG flex--center mg--r-05rem" />}
             id="NewInvoiceButton"
             onClick={GoToCreateNewInvoice}
           />

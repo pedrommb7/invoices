@@ -1,6 +1,6 @@
 @import "../../styles/settings/_colors.scss";
 @import "../../styles/trumps/_hide.scss";
-@import "../../styles/trumps/_align.scss";
+@import "../../styles/trumps/_flex.scss";
 @import "../../styles/trumps/_margins.scss";
 @import "../../styles/trumps/_padding.scss";
 @import "../../styles/trumps/_animation.scss";
@@ -12,6 +12,7 @@
   animation: fadeIn 300ms ease-out 10ms;
   position: absolute;
   z-index: 2;
+  /* transform: translateX(5000px); */
 }
 
 @keyframes fadeIn {
@@ -45,6 +46,8 @@
 
   svg {
     transform: rotate(-90deg);
+    width: 11.17px;
+    height: 6.59px;
   }
 
   :nth-child(3) {
@@ -94,6 +97,12 @@ form {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 
   margin-top: 2rem;
+
+  .genericInfo {
+    ::-webkit-calendar-picker-indicator {
+      color-scheme: orange;
+    }
+  }
 
   .genericInfo > p {
     margin-top: 0;

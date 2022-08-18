@@ -23,7 +23,7 @@ const Button = (property: ButtonProperties) => {
       <button
         type={type}
         id={id}
-        className={`button--${variant} align--${alignment} flex-flow--${flexflow} mg--${mgAmount} pd--${pdAmount} color--${color}`}
+        className={`button--${variant} flex--${alignment} flex-flow--${flexflow} mg--${mgAmount} pd--${pdAmount} color--${color}`}
         onClick={() => onClick()}
       >
         <>

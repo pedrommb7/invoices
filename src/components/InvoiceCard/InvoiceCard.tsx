@@ -41,7 +41,7 @@ const InvoiceCard = (property: InvoiceCard) => {
           </div>
         </div>
 
-        <div className="card__data align--between">
+        <div className="card__data flex--between">
           <div className="card__price">
             <p>{price}€</p>
           </div>

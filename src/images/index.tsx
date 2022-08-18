@@ -1,5 +1,5 @@
 import "./_styling.scss";
-import "../styles/trumps/_align.scss";
+import "../styles/trumps/_flex.scss";
 import "../styles/trumps/_margins.scss";
 
 /* export const downArrowSVG = (
