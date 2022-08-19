@@ -17,15 +17,17 @@ aside > button {
 }
 
 .filter-page {
+  position: fixed;
   height: 100%;
+  top: 0.5rem;
+  z-index: 2;
   background: $body-background;
   transform: translateX(5000px);
+  overflow: overlay;
 }
 
 .transitionMoveInLeft {
   animation: moveInLeft 600ms ease-in-out 10ms forwards;
-  position: absolute;
-  z-index: 2;
 }
 
 @keyframes moveInLeft {

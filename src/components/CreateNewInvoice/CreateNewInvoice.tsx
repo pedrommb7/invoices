@@ -4,6 +4,8 @@ import Input from "components/Input/Input";
 import { DownArrowSVG } from "images";
 import Select from "components/Select/Select";
 import "../../styles/trumps/_fill.scss";
+import "../../styles/trumps/_margins.scss";
+import "../../styles/base/_reset.scss";
 
 import "./_styles.scss";
 
@@ -23,20 +25,26 @@ const CreateNewInvoice = () => {
       } `}
     >
       <nav className="breadcrumb">
-        <Button
-          variant="link"
-          type="button"
-          text="Invoices"
-          onClick={() => setIsNewInvoiceShown(false)}
-        />
-        {<DownArrowSVG className="fill--black" />}
-        <Button
-          variant="link"
-          type="button"
-          text="Create invoice"
-          id="createInvoice"
-          onClick={ReloadNewInvoice}
-        />
+        <a href="/">
+          <Button
+            variant="link"
+            type="button"
+            text="Invoices"
+            onClick={() => setIsNewInvoiceShown(false)}
+          />
+        </a>
+
+        {<DownArrowSVG className="fill--black mg--b-2px" />}
+
+        <a href="#">
+          <Button
+            variant="link"
+            type="button"
+            text="Create invoice"
+            id="createInvoice"
+            onClick={ReloadNewInvoice}
+          />
+        </a>
       </nav>
 
       <header>

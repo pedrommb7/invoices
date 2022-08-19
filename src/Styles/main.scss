@@ -4,6 +4,10 @@
 @import "./tools/mixins.scss";
 @import "./trumps/index.scss";
 
+#root {
+  overflow-x: hidden;
+}
+
 main {
   display: flex;
   flex-direction: column;

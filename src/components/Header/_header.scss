@@ -6,24 +6,28 @@
   position: fixed;
 }
 
-.nav-header {
-  display: flex;
-  justify-content: space-between;
+header {
+  z-index: 0;
 
-  .hamburguer {
-    width: 1.5rem;
-    flex-flow: column wrap;
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
 
-    div {
-      height: 3px;
-      background: $dark-grey;
-      width: 100%;
-      border: none;
-      margin: 0;
+    .hamburguer {
+      width: 1.5rem;
+      flex-flow: column wrap;
 
-      &:nth-child(2) {
-        width: 12px;
-        margin: 7px 10px 7px 0;
+      div {
+        height: 3px;
+        background: $dark-grey;
+        width: 100%;
+        border: none;
+        margin: 0;
+
+        &:nth-child(2) {
+          width: 12px;
+          margin: 7px 10px 7px 0;
+        }
       }
     }
   }
