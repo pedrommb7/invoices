@@ -1,15 +1,9 @@
-@import "../../styles/settings/colors";
+@import "../../styles/settings/index";
 
 /* animation: name | duration | easing-function | delay | forwards*/
 
 aside > button {
   font-size: 24px;
-}
-
-.filter-page svg {
-  transform: rotate(90deg);
-  width: 16.76px;
-  height: 9.88px;
 }
 
 .search button {
@@ -24,6 +18,17 @@ aside > button {
   background: $body-background;
   transform: translateX(5000px);
   overflow: overlay;
+
+  svg {
+    transform: rotate(90deg);
+    width: 16.76px;
+    height: 9.88px;
+  }
+
+  .invoice-date {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .transitionMoveInLeft {
@@ -36,5 +41,28 @@ aside > button {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) and (min-width: $breakpoint-desktop) {
+  .filter-page {
+    width: 500px;
+
+    svg {
+      display: none;
+    }
+
+    span {
+      margin: 0;
+    }
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      transform: translateX(5000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }

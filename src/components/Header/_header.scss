@@ -12,6 +12,7 @@ header {
   .nav-header {
     display: flex;
     justify-content: space-between;
+    flex-flow: row-reverse;
 
     .hamburguer {
       width: 1.5rem;

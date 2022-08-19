@@ -59,7 +59,7 @@ const FilterBy = (properties: FilterByProperties) => {
         />
       </section>
 
-      <section>
+      <section className="invoice-state">
         <label htmlFor="">Invoice state</label>
         <div className="flex--between mg--t-075rem mg--b-15rem">
           <Button
@@ -86,7 +86,7 @@ const FilterBy = (properties: FilterByProperties) => {
         </div>
       </section>
 
-      <section>
+      <section className="invoice-date">
         <label htmlFor="">Invoice date</label>
         <RangeCalendar />
       </section>
