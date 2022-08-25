@@ -1,32 +1,36 @@
-@import "../generic/fonts";
-@import "../settings/index";
+@import "../../styles/generic/fonts";
+@import "../../styles/settings/index";
 
 .button {
-  &--primary {
-    height: max-content;
-    background: $secondary;
-    color: $white;
-    border: 0.125rem solid $secondary;
-    border-radius: 16px;
-    font-weight: 600;
-    line-height: 1.5rem;
-    letter-spacing: 0.0625rem;
-  }
-
+  &--primary,
   &--pill {
     height: max-content;
     color: $white;
-    background: $primary;
-    border-radius: 1.9375rem;
     font-weight: 600;
     line-height: 1.5rem;
+  }
+
+  &--primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    border: 0.125rem solid $primary;
+    border-radius: 1rem;
+  }
+
+  &--pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    border-radius: 1.9375rem;
     font-size: 1rem;
-    letter-spacing: 0.0625rem;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
 
     &:active {
-      background: $secondary;
-      border: 0.125rem solid $secondary;
+      background: $primary;
+      border: 0.125rem solid $primary;
     }
 
     &-inactive {
@@ -37,8 +41,8 @@
       padding: 0.75rem 1.25rem;
 
       &:focus {
-        background: $secondary;
-        border: 0.125rem solid $secondary;
+        background: $primary;
+        border: 0.125rem solid $primary;
       }
     }
 
@@ -48,6 +52,9 @@
   }
 
   &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 600;
   }
 }

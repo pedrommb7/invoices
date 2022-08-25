@@ -3,7 +3,9 @@
 @import "../../styles/trumps/_flex.scss";
 @import "../../styles/trumps/_margins.scss";
 @import "../../styles/trumps/_padding.scss";
-@import "../../styles/trumps/_animation.scss";
+@import "../../styles/trumps/_transition.scss";
+@import "../../styles/trumps/_fill.scss";
+@import "../../styles/base/_reset.scss";
 
 /* animation: name | duration | easing-function | delay */
 
@@ -15,50 +17,10 @@
   /* transform: translateX(5000px); */
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .return-homepage {
   animation: fadeOut 300ms ease-out 10ms;
   position: absolute;
   z-index: 2;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.breadcrumb {
-  button {
-    margin-right: 1rem;
-  }
-
-  svg {
-    transform: rotate(-90deg);
-    width: 11.17px;
-    height: 6.59px;
-  }
-
-  :nth-child(3) {
-    margin-left: 1rem;
-  }
-
-  button {
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
 }
 
 h2 {
@@ -67,21 +29,47 @@ h2 {
 }
 
 .steps {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 0;
 
   button {
-    color: $light-grey;
+    position: relative;
+    color: $grey60;
 
     &:focus {
-      color: $secondary;
+      color: $primary;
+
+      &::after {
+        background: $primary;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      border: 0;
+      height: 2px;
+      bottom: -2px;
+      right: 0;
+      background: $grey60;
     }
   }
 
-  .underline {
-    border: 0;
-    height: 1px;
-    background: rgba(128, 128, 128, 0.1);
+  .step--default {
+    color: $grey60;
+  }
+
+  .step--current {
+    color: $primary;
+
+    &::after {
+      background: $primary;
+    }
+  }
+
+  .step--finished {
+    color: $dark-grey;
   }
 }
 
@@ -91,7 +79,7 @@ label {
 }
 
 form {
-  background: #fff;
+  background: $white;
   padding: 2rem 1.5rem;
   border-radius: 8px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
@@ -105,23 +93,43 @@ form {
   }
 
   .genericInfo > p {
+    position: relative;
     margin-top: 0;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
     text-transform: uppercase;
+    margin-bottom: 0.75rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      border: 0;
+      background: $grey60;
+      border-radius: 1px;
+      bottom: -2px;
+      right: 0;
+    }
   }
 
   .billAddressInfo > p {
+    position: relative;
     margin-top: 2.5rem;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 0.75rem;
     text-transform: uppercase;
-  }
+    margin-bottom: 0.75rem;
 
-  .horizontal-line {
-    height: 1px;
-    background: $light-grey;
-    border-radius: 1px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      border: 0;
+      background: $grey60;
+      border-radius: 1px;
+      bottom: -2px;
+      right: 0;
+    }
   }
 
   .cityZipCode {
@@ -136,9 +144,10 @@ form {
 }
 
 .continue button {
+  margin-top: 2.5rem;
   padding: 0.75rem 6rem;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  color-scheme: $secondary;
+  color-scheme: $primary;
 }

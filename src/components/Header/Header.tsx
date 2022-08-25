@@ -17,7 +17,7 @@ const Header = () => {
           <div></div>
           <div></div>
         </button>
-        <Button mgAmount="26" type="button" icon={moonSVG} onClick={darkMode} />
+        <Button type="button" icon={moonSVG} onClick={darkMode} />
       </nav>
     </header>
   );

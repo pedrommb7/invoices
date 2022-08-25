@@ -6,11 +6,6 @@ import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
 import { DownArrowSVG, filterSVG } from "images";
 import { PlusSVG } from "../../images/index";
-import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_colors.scss";
-import "../../styles/trumps/_flex.scss";
-import "../../styles/trumps/_margins.scss";
-import "../../styles/trumps/_fill.scss";
 import "./_invoiceCardList.scss";
 import "../../images/_styling.scss";
 import CreateNewInvoice from "components/CreateNewInvoice/CreateNewInvoice";
@@ -44,14 +39,13 @@ const InvoiceCardsList = () => {
   };
 
   return (
-    <section className="flex--vertically" id="main-content">
+    <section className="home-page flex--column" id="main-content">
       <header className="filter__header">
         <h1 id="InvoicesNR">Invoices - {cardListing.length}</h1>
 
         <div className="filter__button--wrapper">
           <Button
             variant="link"
-            alignment="center-horizontally"
             flexflow="row-reverse"
             type="button"
             text="Filter"
@@ -61,7 +55,6 @@ const InvoiceCardsList = () => {
           />
           <Button
             variant="pill"
-            alignment="center-horizontally"
             type="button"
             text="New Invoice"
             icon={<PlusSVG className="plusSVG flex--center mg--r-05rem" />}
@@ -82,12 +75,8 @@ const InvoiceCardsList = () => {
       </ul>
 
       <Button
-        mgAmount="tb-2rem"
-        pdAmount="05rem"
         variant="link"
-        alignment="center-horizontally"
         type="button"
-        color="primary"
         text="See more invoices"
         flexflow="row-reverse"
         icon={<DownArrowSVG className="fill--primary mg--l-1rem" />}

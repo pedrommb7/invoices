@@ -1,6 +1,6 @@
 import "./_invoiceCard.scss";
 import "../../styles/trumps/_margins.scss";
-import BadgeComponent from "components/BadgeComponent/BadgeComponent";
+import Badge from "components/Badge/Badge";
 import { InvoiceToShow, INVOICE_STATE, INVOICE_TYPE } from "./declarations";
 
 interface InvoiceCard {
@@ -46,7 +46,7 @@ const InvoiceCard = (property: InvoiceCard) => {
             <p>{price}€</p>
           </div>
           <div className="card__status">
-            <BadgeComponent type={stateStyling()} text={stateToUpperCase} />
+            <Badge type={stateStyling()} text={stateToUpperCase} />
           </div>
         </div>
       </section>

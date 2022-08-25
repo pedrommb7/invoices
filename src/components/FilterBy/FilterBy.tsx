@@ -3,12 +3,6 @@ import { DownArrowSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
 import "./_filterby.scss";
-import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_flex.scss";
-import "../../styles/trumps/_margins.scss";
-import "../../styles/trumps/_padding.scss";
-import "../../styles/trumps/_animation.scss";
-import "../../styles/trumps/_colors.scss";
 import Input from "components/Input/Input";
 import RangeCalendar from "components/Calendar/RangeCalendar";
 import { FilterByProperties } from "./declarations";
@@ -21,7 +15,7 @@ const FilterBy = (properties: FilterByProperties) => {
   return (
     <aside
       className={`pd--26 filter-page ${
-        isFilterShow ? "transitionMoveInLeft" : ""
+        isFilterShow ? "transitionMoveInLeft" : "transition__withMoveIn"
       }`}
     >
       {/* <Button
@@ -29,20 +23,20 @@ const FilterBy = (properties: FilterByProperties) => {
         type="button"
         text="Filters"
         color="black"
-        alignment="center-horizontally"
+        alignment="center"
         icon={downArrowSVG}
         onClick={returnToHomePage}
       /> */}
       <button
         type="button"
-        className="button--link flex--center-horizontally color--black"
+        className="button--link flex--center color--black"
         onClick={() => isFilterShownHandler(false)}
       >
         {<DownArrowSVG className="fill--black" />}
         <span className="mg--l-1rem">Filters</span>
       </button>
 
-      <section className="flex--vertically mg--tb-2rem">
+      <section className="flex--column mg--tb-2rem">
         <label htmlFor="invoice" className="mg--b-075rem">
           Order by:
         </label>
@@ -66,21 +60,18 @@ const FilterBy = (properties: FilterByProperties) => {
             variant="pill-inactive"
             type="button"
             text="Paid"
-            alignment="center-horizontally"
             onClick={activeState}
           />
           <Button
             variant="pill-inactive"
             type="button"
             text="Canceled"
-            alignment="center-horizontally"
             onClick={activeState}
           />
           <Button
             variant="pill-inactive"
             type="button"
             text="Pending"
-            alignment="center-horizontally"
             onClick={activeState}
           />
         </div>
@@ -91,7 +82,7 @@ const FilterBy = (properties: FilterByProperties) => {
         <RangeCalendar />
       </section>
 
-      <section className="flex--vertically mg--t-15rem">
+      <section className="flex--column mg--t-15rem">
         <label htmlFor="" className="mg--b-075rem">
           Client
         </label>
@@ -105,15 +96,12 @@ const FilterBy = (properties: FilterByProperties) => {
         />
       </section>
 
-      <div className="search flex--center-horizontally">
+      <div className="search flex--center">
         <Button
           variant="primary"
           type="submit"
-          mgAmount="tb-15rem"
-          pdAmount="lr-6rem"
           onClick={doSearch}
           text="Search"
-          alignment="center-horizontally"
         />
       </div>
     </aside>

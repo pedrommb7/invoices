@@ -2,18 +2,7 @@ import "./_styling.scss";
 import "../styles/trumps/_flex.scss";
 import "../styles/trumps/_margins.scss";
 
-/* export const downArrowSVG = (
-  <svg
-    width="12"
-    height="8"
-    viewBox="0 0 12 8"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M9.88 1.29L6 5.17L2.12 1.29C1.73 0.899998 1.1 0.899998 0.709996 1.29C0.319996 1.68 0.319996 2.31 0.709996 2.7L5.3 7.29C5.69 7.68 6.32 7.68 6.71 7.29L11.3 2.7C11.69 2.31 11.69 1.68 11.3 1.29C10.91 0.909998 10.27 0.899998 9.88 1.29Z" />
-  </svg>
-); */
-
-export { ReactComponent as DownArrowSVG } from "./down-arrow.svg";
+export { ReactComponent as DownArrowSVG } from "./downArrow.svg";
 
 export const filterSVG = (
   <svg

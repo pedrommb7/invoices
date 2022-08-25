@@ -1,4 +1,10 @@
 @import "../../styles/settings/index";
+@import "../../styles/trumps/_hide.scss";
+@import "../../styles/trumps/_flex.scss";
+@import "../../styles/trumps/_margins.scss";
+@import "../../styles/trumps/_padding.scss";
+@import "../../styles/trumps/_transition.scss";
+@import "../../styles/trumps/_colors.scss";
 
 /* animation: name | duration | easing-function | delay | forwards*/
 
@@ -6,14 +12,17 @@ aside > button {
   font-size: 24px;
 }
 
-.search button {
-  padding: 0.75rem 6rem;
+.search {
+  margin-top: 1.5rem;
+  button {
+    padding: 0.75rem 6rem;
+  }
 }
 
 .filter-page {
   position: fixed;
   height: 100%;
-  top: 0.5rem;
+  top: 0;
   z-index: 2;
   background: $body-background;
   transform: translateX(5000px);
@@ -21,23 +30,25 @@ aside > button {
 
   svg {
     transform: rotate(90deg);
-    width: 16.76px;
-    height: 9.88px;
   }
 
   .invoice-date {
     display: flex;
     flex-direction: column;
+
+    > label {
+      margin-bottom: 0;
+    }
   }
 }
 
 .transitionMoveInLeft {
-  animation: moveInLeft 600ms ease-in-out 10ms forwards;
+  animation: moveInLeft 300ms ease-in-out 10ms forwards;
 }
 
 @keyframes moveInLeft {
   0% {
-    transform: translateX(5000px);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0px);

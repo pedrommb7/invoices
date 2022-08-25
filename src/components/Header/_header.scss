@@ -12,7 +12,6 @@ header {
   .nav-header {
     display: flex;
     justify-content: space-between;
-    flex-flow: row-reverse;
 
     .hamburguer {
       width: 1.5rem;
@@ -30,6 +29,10 @@ header {
           margin: 7px 10px 7px 0;
         }
       }
+    }
+
+    :nth-child(2) {
+      margin: 26px;
     }
   }
 }
@@ -58,5 +61,6 @@ header {
 @media (min-width: $breakpoint-desktop) {
   .nav-header {
     justify-content: flex-end;
+    flex-flow: row-reverse;
   }
 }

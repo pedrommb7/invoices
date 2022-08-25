@@ -1,37 +1,8 @@
 @import "../settings/breakpoints";
 
-/* animation: name | duration | easing-function | delay */
-
 .hide {
   &--sm {
     display: none;
-  }
-
-  &--withMoveIn {
-    animation: moveInRight 900ms ease-in-out 10ms forwards;
-  }
-
-  @keyframes moveInRight {
-    0% {
-      display: block;
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(5000px);
-    }
-  }
-
-  &--withFadeOut {
-    animation: fadeOut 300ms ease-out 10ms;
-  }
-
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
 
   @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {

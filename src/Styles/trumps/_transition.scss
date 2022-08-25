@@ -1,0 +1,38 @@
+/* transition: name | duration | easing-function | delay */
+
+.transition {
+  &__withMoveIn {
+    transition: moveInRight 300ms ease-in-out 10ms forwards;
+  }
+
+  &__withFadeOut {
+    transition: fadeOut 300ms ease-out 10ms;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
