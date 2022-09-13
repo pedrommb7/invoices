@@ -3,7 +3,7 @@ import { InputProperties } from "./declarations";
 import "./_styles.scss";
 
 const Input = (properties: InputProperties) => {
-  const { type, name, placeholder, minLength, maxLength, color } = properties;
+  const { type, name, placeholder, minLength, maxLength } = properties;
 
   return (
     <>
@@ -13,7 +13,6 @@ const Input = (properties: InputProperties) => {
         placeholder={placeholder}
         minLength={minLength}
         maxLength={maxLength}
-        className={`borderColor--${color}`}
       />
     </>
   );

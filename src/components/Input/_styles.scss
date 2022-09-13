@@ -5,17 +5,12 @@ label {
   margin-bottom: 0.75rem;
 }
 
-.borderColor {
-  &--primary-light {
-    border: 2px solid $primary-light;
-    border-radius: 10px;
-  }
-}
-
 input {
   padding: 1rem;
   font-family: $OpenSans;
   font-weight: 300;
+  border: 2px solid $primary-light;
+  border-radius: 10px;
 
   &:focus {
     border: 2px solid $primary-light;

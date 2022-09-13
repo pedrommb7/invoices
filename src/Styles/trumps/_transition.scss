@@ -1,11 +1,11 @@
 /* transition: name | duration | easing-function | delay */
 
 .transition {
-  &__withMoveIn {
+  &__with-move-in {
     transition: moveInRight 300ms ease-in-out 10ms forwards;
   }
 
-  &__withFadeOut {
+  &__with-fade-out {
     transition: fadeOut 300ms ease-out 10ms;
   }
 }

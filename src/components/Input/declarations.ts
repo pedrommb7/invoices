@@ -4,5 +4,4 @@ export interface InputProperties {
     placeholder?: string;
     minLength?: number;
     maxLength?: number;
-    color: string;
 }

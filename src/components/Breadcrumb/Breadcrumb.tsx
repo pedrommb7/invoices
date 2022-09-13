@@ -1,5 +1,5 @@
 import Button from "components/Button/Button";
-import { DownArrowSVG } from "images";
+import { ChevronSVG } from "images";
 import React from "react";
 import "../Button/_button.scss";
 import "./_styles.scss";
@@ -11,7 +11,7 @@ const Breadcrumb = () => {
         Invoices
       </a>
 
-      {<DownArrowSVG className="fill--black" />}
+      {<ChevronSVG className="fill--black" />}
 
       <a href="#" className="button--link" id="createInvoice">
         Create invoice

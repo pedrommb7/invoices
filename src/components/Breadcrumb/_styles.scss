@@ -4,7 +4,6 @@
   display: flex;
 
   a {
-    margin-top: 1px;
     margin-right: 1rem;
     font-weight: 400;
     font-size: 0.875rem;
@@ -14,7 +13,7 @@
     transform: rotate(-90deg);
   }
 
-  :nth-child(3) {
+  #createInvoice {
     margin-left: 1rem;
     color: $primary;
   }

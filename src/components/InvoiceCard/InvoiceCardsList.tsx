@@ -4,7 +4,7 @@ import { InvoiceToShow } from "./declarations";
 import { getCardList } from "components/InvoiceCard/actions";
 import Button from "components/Button/Button";
 import FilterBy from "../FilterBy/FilterBy";
-import { DownArrowSVG, filterSVG } from "images";
+import { ChevronSVG, FilterSVG } from "images";
 import { PlusSVG } from "../../images/index";
 import "./_invoiceCardList.scss";
 import "../../images/_styling.scss";
@@ -32,10 +32,12 @@ const InvoiceCardsList = () => {
 
   const GoToCreateNewInvoice = () => {
     setIsNewInvoice(true);
-    document.getElementById("createInvoice")?.classList.add("color--secondary");
+    document
+      .getElementById("createInvoice")
+      ?.classList.add("color--primary-light");
     document
       .getElementById("invoiceDetails")
-      ?.classList.add("color--secondary");
+      ?.classList.add("color--primary-light");
   };
 
   return (
@@ -49,7 +51,7 @@ const InvoiceCardsList = () => {
             flexflow="row-reverse"
             type="button"
             text="Filter"
-            icon={filterSVG}
+            icon={<FilterSVG className="mg--l-05rem" id="filterSVG" />}
             id="FilterButton"
             onClick={GoToFiltersPage}
           />
@@ -79,7 +81,7 @@ const InvoiceCardsList = () => {
         type="button"
         text="See more invoices"
         flexflow="row-reverse"
-        icon={<DownArrowSVG className="fill--primary mg--l-1rem" />}
+        icon={<ChevronSVG className="fill--primary mg--l-1rem" />}
         id="SeeMoreInvoices"
         onClick={() => console.log(getCardList())}
       />

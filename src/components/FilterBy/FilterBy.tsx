@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { DownArrowSVG } from "../../images/index";
+import { ChevronSVG, CloseSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
 import "./_filterby.scss";
+import "../../styles/trumps/_hide.scss";
+import "../../styles/trumps/_flexflow.scss";
 import Input from "components/Input/Input";
 import RangeCalendar from "components/Calendar/RangeCalendar";
 import { FilterByProperties } from "./declarations";
@@ -15,26 +17,20 @@ const FilterBy = (properties: FilterByProperties) => {
   return (
     <aside
       className={`pd--26 filter-page ${
-        isFilterShow ? "transitionMoveInLeft" : "transition__withMoveIn"
+        isFilterShow ? "transitionMoveInLeft" : "transition__with-move-in"
       }`}
     >
-      {/* <Button
-        variant="link"
-        type="button"
-        text="Filters"
-        color="black"
-        alignment="center"
-        icon={downArrowSVG}
-        onClick={returnToHomePage}
-      /> */}
-      <button
-        type="button"
-        className="button--link flex--center color--black"
-        onClick={() => isFilterShownHandler(false)}
-      >
-        {<DownArrowSVG className="fill--black" />}
+      <header className="flex filter-page__button-close">
+        <button
+          type="button"
+          className="button--link color--black"
+          onClick={() => isFilterShownHandler(false)}
+        >
+          {<CloseSVG className="closeSVG hide--sm" />}
+          {<ChevronSVG className="fill--black hide--md hide--lg" />}
+        </button>
         <span className="mg--l-1rem">Filters</span>
-      </button>
+      </header>
 
       <section className="flex--column mg--tb-2rem">
         <label htmlFor="invoice" className="mg--b-075rem">
@@ -92,11 +88,10 @@ const FilterBy = (properties: FilterByProperties) => {
           placeholder="Type a client name"
           minLength={4}
           maxLength={20}
-          color="primary-light"
         />
       </section>
 
-      <div className="search flex--center">
+      <div className="filter-page__button-search flex--center">
         <Button
           variant="primary"
           type="submit"

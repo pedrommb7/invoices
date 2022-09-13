@@ -4,6 +4,9 @@
 .button {
   &--primary,
   &--pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: max-content;
     color: $white;
     font-weight: 600;
@@ -11,25 +14,18 @@
   }
 
   &--primary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: $primary;
     border: 0.125rem solid $primary;
     border-radius: 1rem;
   }
 
   &--pill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: $primary;
     border-radius: 1.9375rem;
     font-size: 1rem;
     padding: 0.25rem 0.5rem 0.25rem 0.25rem;
 
     &:active {
-      background: $primary;
       border: 0.125rem solid $primary;
     }
 

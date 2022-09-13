@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
-import { DownArrowSVG } from "images";
+import { ChevronSVG } from "images";
 import Select from "components/Select/Select";
 import Breadcrumb from "components/Breadcrumb/Breadcrumb";
-import "../../styles/trumps/_colors.scss";
 import "./_styles.scss";
+import HeaderSteps from "components/HeaderSteps/HeaderSteps";
 
 const ReloadNewInvoice = () => {};
-const ReloadInvoiceDetails = () => {};
-const ReloadClientDetails = () => {};
-const ReloadInvoiceItems = () => {};
 
 const CreateNewInvoice = () => {
   let [isNewInvoiceShown, setIsNewInvoiceShown] = useState(true);
-  let [currentState, setCurrentState] = useState(true);
   let [finishedState, setFinishedState] = useState(true);
   let [defaultState, setDefaultState] = useState(true);
 
@@ -24,60 +20,17 @@ const CreateNewInvoice = () => {
 
   return (
     <aside
-      className={`pd--1rem new-invoice ${
-        isNewInvoiceShown ? "" : "transition__withFadeOut"
+      className={`pd--1rem ${
+        isNewInvoiceShown ? "new-invoice" : "transition__with-fade-out"
       } `}
     >
       <Breadcrumb />
 
-      <header>
-        <h2>Create New Invoice</h2>
-
-        <section className="steps flex--between">
-          <div className="flex--column">
-            <button
-              type="button"
-              className={`button--link step--${
-                currentState ? "current" : "default"
-              }`}
-              id="invoiceDetails"
-              onClick={ReloadInvoiceDetails}
-            >
-              Invoice Details
-            </button>
-          </div>
-
-          <div className="flex--column">
-            <button
-              type="button"
-              className={`button--link step--${
-                currentState ? "default" : "current"
-              }`}
-              id="clientDetails"
-              onClick={ReloadClientDetails}
-            >
-              Client Details
-            </button>
-          </div>
-
-          <div className="flex--column">
-            <button
-              type="button"
-              className={`button--link step--${
-                currentState ? "default" : "current"
-              }`}
-              id="invoiceItems"
-              onClick={ReloadInvoiceItems}
-            >
-              Invoice items
-            </button>
-          </div>
-        </section>
-      </header>
+      <HeaderSteps />
 
       <form action="">
-        <div className="genericInfo">
-          <p>Generic Information</p>
+        <div className="generic-info">
+          <p className="form-title">Generic Information</p>
 
           <div className="flex--column mg--tb-1rem">
             <label htmlFor="">Invoice Description</label>
@@ -86,7 +39,6 @@ const CreateNewInvoice = () => {
               name="invoiceDescription"
               minLength={4}
               maxLength={30}
-              color="primary-light"
             />
           </div>
 
@@ -95,7 +47,6 @@ const CreateNewInvoice = () => {
             <Select
               name="invoiceState"
               id="invoiceState"
-              color="primary-light"
               options={[
                 { key: "Paid", value: "paid" },
                 { key: "Pending", value: "pending" },
@@ -106,62 +57,40 @@ const CreateNewInvoice = () => {
 
           <div className="flex--column mg--tb-1rem">
             <label htmlFor="">Invoice Date</label>
-            <Input type="date" name="invoiceDate" color="primary-light" />
+            <Input type="date" name="invoiceDate" />
           </div>
 
           <div className="flex--column mg--tb-1rem">
             <label htmlFor="">Payment Due Date</label>
-            <Input type="date" name="invoiceDate" color="primary-light" />
+            <Input type="date" name="invoiceDate" />
           </div>
         </div>
 
         <div className="billAddressInfo">
-          <p>Billing Address Information</p>
+          <p className="form-title" style={{ marginTop: "2.5rem" }}>
+            Billing Address Information
+          </p>
 
           <div className="flex--column mg--tb-1rem">
             <label htmlFor="">Street</label>
-            <Input
-              type="text"
-              name="street"
-              minLength={4}
-              maxLength={40}
-              color="primary-light"
-            />
+            <Input type="text" name="street" minLength={4} maxLength={40} />
           </div>
 
-          <div className="flex--between cityZipCode">
+          <div className="flex--between city-ZipCode">
             <div className="flex--column mg--tb-1rem">
               <label htmlFor="">City</label>
-              <Input
-                type="text"
-                name="city"
-                minLength={4}
-                maxLength={25}
-                color="primary-light"
-              />
+              <Input type="text" name="city" minLength={4} maxLength={25} />
             </div>
 
             <div className="flex--column mg--tb-1rem">
               <label htmlFor="">Zip Code</label>
-              <Input
-                type="text"
-                name="city"
-                minLength={4}
-                maxLength={20}
-                color="primary-light"
-              />
+              <Input type="text" name="city" minLength={4} maxLength={20} />
             </div>
           </div>
 
           <div className="flex--column mg--tb-1rem">
             <label htmlFor="">Country</label>
-            <Input
-              type="text"
-              name="city"
-              minLength={4}
-              maxLength={20}
-              color="primary-light"
-            />
+            <Input type="text" name="city" minLength={4} maxLength={20} />
           </div>
         </div>
 
