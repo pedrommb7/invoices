@@ -1,8 +1,6 @@
 import React from "react";
 import { MoonSVG } from "images";
 import Button from "components/Button/Button";
-import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_margins.scss";
 import "./_header.scss";
 import { FilterByProperties } from "components/FilterBy/declarations";
 

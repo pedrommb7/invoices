@@ -1,5 +1,4 @@
 import "./_invoiceCard.scss";
-import "../../styles/trumps/_margins.scss";
 import Badge from "components/Badge/Badge";
 import { InvoiceToShow, INVOICE_STATE, INVOICE_TYPE } from "./declarations";
 

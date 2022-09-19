@@ -3,8 +3,6 @@ import { ChevronSVG, CloseSVG } from "../../images/index";
 import Button from "components/Button/Button";
 import Select from "components/Select/Select";
 import "./_filterby.scss";
-import "../../styles/trumps/_hide.scss";
-import "../../styles/trumps/_flexflow.scss";
 import Input from "components/Input/Input";
 import RangeCalendar from "components/Calendar/RangeCalendar";
 import { FilterByProperties } from "./declarations";
@@ -17,7 +15,9 @@ const FilterBy = (properties: FilterByProperties) => {
   return (
     <aside
       className={`pd--26 filter-page ${
-        isFilterShow ? "transitionMoveInLeft" : "transition__with-move-in"
+        isFilterShow
+          ? "animation__with-moveIn-left"
+          : "transition__with-move-in"
       }`}
     >
       <header className="flex filter-page__button-close">
@@ -39,7 +39,6 @@ const FilterBy = (properties: FilterByProperties) => {
         <Select
           name="invoice"
           id="invoice"
-          color="primary-light"
           options={[
             { key: "InvoiceID - ASC", value: "invoiceId-ASC" },
             { key: "InvoiceID - DESC", value: "invoiceId-DESC" },

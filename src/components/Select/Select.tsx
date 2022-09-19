@@ -3,10 +3,10 @@ import { SelectProperties } from "./declarations";
 import "./_styles.scss";
 
 const Select = (properties: SelectProperties) => {
-  const { name, id, color, options } = properties;
+  const { name, id, options } = properties;
 
   return (
-    <select name={name} id={id} className={`borderColor--${color}`}>
+    <select name={name} id={id}>
       {options.map((option, index) => {
         return (
           <option key={index} value={option.value}>
