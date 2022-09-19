@@ -1,0 +1,17 @@
+.step {
+  &--default {
+    color: $grey60;
+  }
+
+  &--current {
+    color: $primary;
+
+    &::after {
+      background: $primary;
+    }
+  }
+
+  &--finished {
+    color: $dark-grey;
+  }
+}

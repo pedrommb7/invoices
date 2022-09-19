@@ -1,21 +1,20 @@
 import React from "react";
-import "../../styles/trumps/_button.scss";
-import {ButtonProperties} from '../common';
-import "../../styles/settings/_colors.scss";
+import "./_button.scss";
+import { ButtonProperties } from "./declarations";
 
 const Button = (property: ButtonProperties) => {
-
-  const {variant, type, text, alignment, flexflow, mgAmount, pdAmount, color, icon, onClick} = property
+  const { variant, type, text, flexflow, icon, id, onClick } = property;
 
   return (
     <>
       <button
         type={type}
-        className={`button--${variant} align--${alignment} flex-flow--${flexflow} mg--${mgAmount} pd--${pdAmount} color--${color}`}
+        id={id}
+        className={`button--${variant} flex-flow--${flexflow}`}
         onClick={() => onClick()}
       >
         <>
-          {icon.svg}
+          {icon}
           {text}
         </>
       </button>

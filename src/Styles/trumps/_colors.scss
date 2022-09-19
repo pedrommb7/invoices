@@ -5,8 +5,12 @@
     color: $primary;
   }
 
-  &--secondary {
-    color: $secondary;
+  &--primary-light {
+    color: $primary-light;
+  }
+
+  &--black {
+    color: $dark-grey;
   }
 
   &--success {

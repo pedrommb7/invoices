@@ -2,10 +2,11 @@
 @import "../../styles/settings/colors";
 @import "../../styles/settings/breakpoints";
 @import "../../styles/tools/mixins";
+@import "../../styles/trumps/_margins.scss";
 
 .card {
-  background: $card-background;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: $grey20;
+  box-shadow: 0px 4px 8px $grey-shadow;
   border-radius: 10px;
   padding: 1.5rem;
   display: flex;
@@ -25,7 +26,7 @@
       }
 
       :nth-child(2) {
-        margin-top: 15px;
+        margin-top: 1rem;
       }
     }
 
@@ -73,6 +74,7 @@
 
       .date {
         font-weight: 300;
+        margin: 0;
       }
 
       &__userinfo {

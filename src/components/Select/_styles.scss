@@ -1,0 +1,10 @@
+@import "../../styles/settings/index.scss";
+@import "../../styles/generic/fonts.scss";
+
+select {
+  border: 2px solid $primary-light;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: $OpenSans;
+  font-weight: 300;
+}

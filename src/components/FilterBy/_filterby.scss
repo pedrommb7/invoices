@@ -1,0 +1,61 @@
+@import "../../styles/settings/index";
+@import "../../styles/trumps/_hide.scss";
+@import "../../styles/trumps/_flex.scss";
+@import "../../styles/trumps/_flexflow.scss";
+@import "../../styles/trumps/_margins.scss";
+@import "../../styles/trumps/_padding.scss";
+@import "../../styles/trumps/_transition.scss";
+@import "../../styles/trumps/_animation.scss";
+@import "../../styles/trumps/_colors.scss";
+
+/* animation: name | duration | easing-function | delay | forwards*/
+
+aside > button {
+  font-size: 1.5rem;
+}
+
+.filter-page {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  background: $body-background;
+  transform: translateX(100%);
+  overflow: auto;
+
+  svg {
+    transform: rotate(90deg);
+  }
+
+  .invoice-date {
+    display: flex;
+    flex-direction: column;
+
+    > label {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-search {
+    margin-top: 1.5rem;
+    button {
+      padding: 0.75rem 6rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) and (min-width: $breakpoint-desktop) {
+  .filter-page {
+    width: 500px;
+
+    &__button-close {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row-reverse;
+    }
+
+    span {
+      margin: 0;
+    }
+  }
+}

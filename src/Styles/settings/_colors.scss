@@ -1,7 +1,16 @@
-$primary: #62d5d5;
-$secondary: #6dc7c7;
-$card-background: #f0f2f5;
-$menu-color: #323338;
+/*Main colors - Light Theme*/
+$primary: #6dc7c7;
+$primary-light: #9ed8d8;
+
+/*Grey scale*/
+$white: #ffffff;
+$grey20: #f0f1f5;
+$grey40: #e2e4e9;
+$grey60: #dddddd;
+$dark-grey: #323338;
+$light-grey-shadow: rgba(0, 0, 0, 0.05);
+$grey-shadow: rgba(0, 0, 0, 0.1);
+
 $body-background: linear-gradient(
   177.16deg,
   #ffffff -5.63%,
@@ -10,8 +19,8 @@ $body-background: linear-gradient(
 );
 
 $success: #2cc87f;
-$success-light: #2ee08d;
+$success-darken: #1e8b58;
 $warning: #eac60a;
-$warning-light: #ebd047;
+$warning-darken: #dfba31;
 $danger: #f56855;
-$danger-light: #ff4b33;
+$danger-darken: #da250c;

@@ -1,0 +1,56 @@
+@import "../../styles/generic/fonts";
+@import "../../styles/settings/index";
+
+.button {
+  &--primary,
+  &--pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    color: $white;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+
+  &--primary {
+    background: $primary;
+    border: 0.125rem solid $primary;
+    border-radius: 1rem;
+  }
+
+  &--pill {
+    background: $primary;
+    border-radius: 1.9375rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+
+    &:active {
+      border: 0.125rem solid $primary;
+    }
+
+    &-inactive {
+      background: $white;
+      border: 0.125rem solid $primary-light;
+      border-radius: 1.875rem;
+      height: max-content;
+      padding: 0.75rem 1.25rem;
+
+      &:focus {
+        background: $primary;
+        border: 0.125rem solid $primary;
+      }
+    }
+
+    &-bgnone {
+      background: none;
+    }
+  }
+
+  &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../styles/settings/index";
+@import "../../styles/tools/mixins";
+@import "../../styles/trumps/hide";
+@import "../../styles/trumps/_hide.scss";
+@import "../../styles/trumps/_margins.scss";
+
+header {
+  z-index: 0;
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+
+    .hamburguer {
+      width: 1.5rem;
+      flex-flow: column wrap;
+
+      div {
+        height: 3px;
+        background: $dark-grey;
+        width: 100%;
+        border: none;
+        margin: 0;
+
+        &:nth-child(2) {
+          width: 12px;
+          margin: 7px 10px 7px 0;
+        }
+      }
+    }
+
+    :nth-child(2) {
+      margin: 26px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .hamburguer {
+    width: 1.5rem;
+    flex-flow: column wrap;
+
+    div {
+      height: 3px;
+      width: 40px;
+      background: $dark-grey;
+      width: 100%;
+      border: none;
+      margin: 0;
+
+      &:nth-child(2) {
+        width: 12px;
+        margin: 7px 10px 7px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .nav-header {
+    justify-content: flex-end;
+    flex-flow: row-reverse;
+  }
+}

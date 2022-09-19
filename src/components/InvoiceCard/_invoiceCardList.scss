@@ -1,0 +1,16 @@
+@import "../../styles/settings/colors";
+@import "../../styles/trumps/_hide.scss";
+@import "../../styles/trumps/_colors.scss";
+@import "../../styles/trumps/_flex.scss";
+@import "../../styles/trumps/_margins.scss";
+@import "../../styles/trumps/_fill.scss";
+
+#main-content {
+  position: relative;
+}
+
+#SeeMoreInvoices {
+  color: $primary;
+  margin: 2rem 0;
+  padding: 0.5rem;
+}

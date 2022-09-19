@@ -1,0 +1,48 @@
+@import "../../styles/settings/colors";
+@import "../../styles/trumps/step.scss";
+.step {
+  &__container {
+    font-size: 0.875rem;
+    margin-left: 0;
+
+    button {
+      position: relative;
+      color: $grey60;
+
+      &:focus {
+        color: $primary;
+
+        &::after {
+          background: $primary;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border: 0;
+        height: 2px;
+        bottom: -2px;
+        right: 0;
+        background: $grey60;
+      }
+    }
+  }
+
+  .step--default {
+    color: $grey60;
+  }
+
+  .step--current {
+    color: $primary;
+
+    &::after {
+      background: $primary;
+    }
+  }
+
+  .step--finished {
+    color: $dark-grey;
+  }
+}
